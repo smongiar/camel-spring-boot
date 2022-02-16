@@ -16,7 +16,6 @@
  */
 package org.apache.camel.springboot.maven;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -143,36 +142,6 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
     @Parameter(property = "bom.camelCommunityVersion", defaultValue = "${camel-spring-boot-community.version}")
     protected String camelCommunityVersion;
 
-    /**
-     * Reads in the list of required productized camel-spring-boot artifacts from the file.
-     *
-     *  @return map of required productized camel-spring-boot artifacts
-     **/
-    private HashMap getProductizedCSBArtifacts(File requiredFile) {
-        HashMap<String, Boolean> map = new HashMap<String, Boolean>();
-
-        try {
-            FileReader fileReader = new FileReader(requiredFile);
-            BufferedReader br = new BufferedReader(fileReader);
-
-            String line;
-            while ((line = br.readLine()) != null) {
-                if (line.startsWith("#")) {
-                    continue;
-                }
-
-                if (!map.containsKey(line)) {
-                    map.put(line, true);
-                } else {
-                    map.replace(line, true);
-                }
-            }
-        } catch (IOException ioe) {
-            throw new RuntimeException(ioe);
-        }
-        return map;
-    }
-
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
         try {
@@ -232,7 +201,7 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
             }
         }
 
-        HashMap<String, Boolean> productizedArtifacts = getProductizedCSBArtifacts      (requiredProductizedCamelSpringBootArtifactsFile);
+        HashMap<String, Boolean> productizedArtifacts = RequiredProductizedArtifactsReader.getProductizedCSBArtifacts(requiredProductizedCamelSpringBootArtifactsFile);
 
 
         Files.list(startersDir.toPath())
