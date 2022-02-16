@@ -26,6 +26,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.HashSet;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
@@ -135,6 +136,12 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
     @Parameter(defaultValue = "${basedir}/../../components-starter")
     protected File startersDir;
 
+    @Parameter(defaultValue = "${basedir}/../../product/src/main/resources/required-productized-camel-artifacts.txt")
+    protected File requiredProductizedCamelSpringBootArtifactsFile;
+
+    @Parameter(property = "bom.camelCommunityVersion", defaultValue = "${camel-spring-boot-community.version}")
+    protected String camelCommunityVersion;
+
     @Override
     public void execute() throws MojoExecutionException, MojoFailureException {
         try {
@@ -194,6 +201,9 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
             }
         }
 
+        HashMap<String, Boolean> productizedArtifacts = RequiredProductizedArtifactsReader.getProductizedCSBArtifacts(requiredProductizedCamelSpringBootArtifactsFile);
+
+
         Files.list(startersDir.toPath())
                 .filter(Files::isDirectory)
                 // must have a pom.xml to be active
@@ -205,7 +215,8 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
                     Dependency dep = new Dependency();
                     dep.setGroupId("org.apache.camel.springboot");
                     dep.setArtifactId(dir.getFileName().toString());
-                    dep.setVersion("${project.version}");
+                    dep.setVersion(productizedArtifacts.containsKey(dir.getFileName().toString()) ? "${project.version}"
+                        : camelCommunityVersion);
                     return dep;
                 })
                 .forEach(outDependencies::add);
