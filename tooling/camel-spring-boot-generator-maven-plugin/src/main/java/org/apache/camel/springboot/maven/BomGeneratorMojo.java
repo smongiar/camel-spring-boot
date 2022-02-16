@@ -16,6 +16,7 @@
  */
 package org.apache.camel.springboot.maven;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -24,6 +25,7 @@ import java.io.StringWriter;
 import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.xml.XMLConstants;
@@ -72,14 +74,47 @@ public class BomGeneratorMojo extends AbstractMojo {
     @Parameter(defaultValue = "${basedir}/pom.xml")
     protected File sourcePom;
 
-    /**
-     * The pom file.
-     */
     @Parameter(defaultValue = "${project.build.directory}/${project.name}-pom.xml")
     protected File targetPom;
 
     @Parameter(defaultValue = "${basedir}/../../components-starter")
     protected File startersDir;
+
+    @Parameter(defaultValue = "${basedir}/../../product/src/main/resources/required-productized-camel-artifacts.txt")
+    protected File requiredProductizedCamelSpringBootArtifactsFile;
+
+    @Parameter(property = "bom.camelCommunityVersion", defaultValue = "${camel-spring-boot-community.version}")
+    protected String camelCommunityVersion;
+
+    /**
+     * Reads in the list of required productized camel-spring-boot artifacts from the file.
+     *
+     *  @return map of required productized camel-spring-boot artifacts
+     **/
+    private HashMap<String, Boolean> getProductizedCSBArtifacts(File requiredFile) {
+        HashMap<String, Boolean> map = new HashMap<>();
+
+        try {
+            FileReader fileReader = new FileReader(requiredFile);
+            BufferedReader br = new BufferedReader(fileReader);
+
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.startsWith("#")) {
+                    continue;
+                }
+                
+                if (!map.containsKey(line)) {
+                    map.put(line, true);
+                } else {
+                    map.replace(line, true);
+                }
+            }
+        } catch (IOException ioe) {
+            throw new RuntimeException(ioe);
+        }
+        return map;
+    }
 
     @Override
     public void execute() throws MojoExecutionException {
@@ -97,6 +132,8 @@ public class BomGeneratorMojo extends AbstractMojo {
     private List<Dependency> starters() throws IOException {
         List<Dependency> outDependencies = new ArrayList<>();
 
+        HashMap<String, Boolean> productizedArtifacts = getProductizedCSBArtifacts(requiredProductizedCamelSpringBootArtifactsFile);
+
         Files.list(startersDir.toPath())
                 .filter(Files::isDirectory)
                 // must have a pom.xml to be active
@@ -108,7 +145,8 @@ public class BomGeneratorMojo extends AbstractMojo {
                     Dependency dep = new Dependency();
                     dep.setGroupId("org.apache.camel.springboot");
                     dep.setArtifactId(dir.getFileName().toString());
-                    dep.setVersion("${project.version}");
+                    dep.setVersion(productizedArtifacts.containsKey(dir.getFileName().toString()) ? "${project.version}"
+                        : camelCommunityVersion);
                     return dep;
                 })
                 .forEach(outDependencies::add);
