@@ -85,6 +85,9 @@ public class BomGeneratorMojo extends AbstractMojo {
     @Parameter(property = "bom.camelCommunityVersion", defaultValue = "${camel-spring-boot-community.version}")
     protected String camelCommunityVersion;
 
+    @Parameter(property = "bom.camelVersion", defaultValue = "${camel-version}")
+    protected String camelVersion;
+
     @Override
     public void execute() throws MojoExecutionException {
         try {
@@ -165,27 +168,27 @@ public class BomGeneratorMojo extends AbstractMojo {
         dep = new Dependency();
         dep.setGroupId("org.apache.camel");
         dep.setArtifactId("camel-management");
-        dep.setVersion("${project.version}");
+        dep.setVersion(camelCommunityVersion);
         outDependencies.add(dep);
         dep = new Dependency();
         dep.setGroupId("org.apache.camel");
         dep.setArtifactId("camel-test-spring");
-        dep.setVersion("${project.version}");
+        dep.setVersion(camelCommunityVersion);
         outDependencies.add(dep);
         dep = new Dependency();
         dep.setGroupId("org.apache.camel");
         dep.setArtifactId("camel-test-spring-junit5");
-        dep.setVersion("${project.version}");
+        dep.setVersion(camelCommunityVersion);
         outDependencies.add(dep);
         dep = new Dependency();
         dep.setGroupId("org.apache.camel");
         dep.setArtifactId("camel-testcontainers-spring");
-        dep.setVersion("${project.version}");
+        dep.setVersion(camelCommunityVersion);
         outDependencies.add(dep);
         dep = new Dependency();
         dep.setGroupId("org.apache.camel");
         dep.setArtifactId("camel-testcontainers-spring-junit5");
-        dep.setVersion("${project.version}");
+        dep.setVersion(camelCommunityVersion);
         outDependencies.add(dep);
 
         return outDependencies;
