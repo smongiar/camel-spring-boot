@@ -32,7 +32,7 @@
   <modules>
     <module>camel-java-joor-dsl-starter</module>
     <module>camel-xml-io-dsl-starter</module>
-    <module>camel-xml-jaxb-dsl-starter</module>
+    <!-- <module>camel-xml-jaxb-dsl-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <module>camel-yaml-dsl-starter</module>
   </modules>
 </project>
