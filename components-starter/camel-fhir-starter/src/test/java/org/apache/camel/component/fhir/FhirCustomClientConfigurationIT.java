@@ -71,13 +71,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 @SpringBootTest(
         classes = {
                 CamelAutoConfiguration.class,
-                FhirCustomClientConfigurationTest.class,
-                FhirCustomClientConfigurationTest.TestConfiguration.class,
+                FhirCustomClientConfigurationIT.class,
+                FhirCustomClientConfigurationIT.TestConfiguration.class,
                 CustomNoFhirServerUrlCamelContext.class,
                 FhirServer.class,
         }
 )
-public class FhirCustomClientConfigurationTest extends AbstractFhirTestSupport {
+public class FhirCustomClientConfigurationIT extends AbstractFhirTestSupport {
 
     private static final String PATH_PREFIX = FhirApiCollection.getCollection().getApiName(FhirCreateApiMethod.class).getName();
 
