@@ -155,7 +155,7 @@
     <!-- <module>camel-barcode-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-base64-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <module>camel-bean-starter</module>
-    <!-- <module>camel-bean-validator-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-bean-validator-starter</module>
     <!-- <module>camel-beanio-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-beanstalk-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <module>camel-bindy-starter</module>
@@ -203,14 +203,14 @@
     <!-- <module>camel-drill-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-dropbox-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-ehcache-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <module>camel-elasticsearch-rest-starter</module>
+    <!-- <module>camel-elasticsearch-rest-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-elsql-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-etcd-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-etcd3-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-exec-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-facebook-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-fastjson-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-fhir-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-fhir-starter</module>
     <module>camel-file-starter</module>
     <!-- <module>camel-file-watch-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-flatpack-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
@@ -254,7 +254,7 @@
     <!-- <module>camel-iec60870-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-ignite-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-infinispan-embedded-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-infinispan-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-infinispan-starter</module>
     <!-- <module>camel-influxdb-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-iota-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-ipfs-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
@@ -308,7 +308,7 @@
     <!-- <module>camel-lucene-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-lumberjack-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-lzf-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-mail-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-mail-starter</module>
     <module>camel-master-starter</module>
     <!-- <module>camel-metrics-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-micrometer-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
@@ -339,7 +339,7 @@
     <!-- <module>camel-opentracing-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-optaplanner-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-paho-mqtt5-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-paho-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-paho-starter</module>
     <!-- <module>camel-pdf-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-pg-replication-slot-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-pgevent-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
@@ -348,7 +348,7 @@
     <!-- <module>camel-protobuf-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-pubnub-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-pulsar-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-quartz-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-quartz-starter</module>
     <!-- <module>camel-quickfix-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-rabbitmq-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-reactive-streams-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
@@ -445,7 +445,7 @@
     <!-- <module>camel-yammer-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-zendesk-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-zip-deflater-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-zipfile-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-zipfile-starter</module>
     <!-- <module>camel-zipkin-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-zookeeper-master-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-zookeeper-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
