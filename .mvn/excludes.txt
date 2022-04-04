@@ -34,7 +34,6 @@
 :camel-azure-storage-datalake-starter
 :camel-barcode-starter
 :camel-base64-starter
-:camel-bean-validator-starter
 :camel-beanio-starter
 :camel-beanstalk-starter
 :camel-bonita-starter
@@ -73,13 +72,13 @@
 :camel-drill-starter
 :camel-dropbox-starter
 :camel-ehcache-starter
+:camel-elasticsearch-rest-starter
 :camel-elsql-starter
 :camel-etcd-starter
 :camel-etcd3-starter
 :camel-exec-starter
 :camel-facebook-starter
 :camel-fastjson-starter
-:camel-fhir-starter
 :camel-file-watch-starter
 :camel-flatpack-starter
 :camel-flink-starter
@@ -118,7 +117,6 @@
 :camel-iec60870-starter
 :camel-ignite-starter
 :camel-infinispan-embedded-starter
-:camel-infinispan-starter
 :camel-influxdb-starter
 :camel-iota-starter
 :camel-ipfs-starter
@@ -160,7 +158,6 @@
 :camel-lucene-starter
 :camel-lumberjack-starter
 :camel-lzf-starter
-:camel-mail-starter
 :camel-metrics-starter
 :camel-micrometer-starter
 :camel-milo-starter
@@ -185,7 +182,6 @@
 :camel-opentracing-starter
 :camel-optaplanner-starter
 :camel-paho-mqtt5-starter
-:camel-paho-starter
 :camel-pdf-starter
 :camel-pg-replication-slot-starter
 :camel-pgevent-starter
@@ -194,7 +190,6 @@
 :camel-protobuf-starter
 :camel-pubnub-starter
 :camel-pulsar-starter
-:camel-quartz-starter
 :camel-quickfix-starter
 :camel-rabbitmq-starter
 :camel-reactive-streams-starter
@@ -273,7 +268,6 @@
 :camel-yammer-starter
 :camel-zendesk-starter
 :camel-zip-deflater-starter
-:camel-zipfile-starter
 :camel-zipkin-starter
 :camel-zookeeper-master-starter
 :camel-zookeeper-starter

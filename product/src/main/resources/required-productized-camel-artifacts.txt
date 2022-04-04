@@ -14,6 +14,7 @@ camel-azure-storage-blob-starter
 camel-azure-storage-queue-starter
 camel-base-starter
 camel-bean-starter
+camel-bean-validator-starter
 camel-bindy-starter
 camel-cassandraql-starter
 camel-catalog-starter
@@ -27,14 +28,15 @@ camel-cron-starter
 camel-dependencies-starter
 camel-dependencies-generator-starter
 camel-direct-starter
-camel-elasticsearch-rest-starter
 camel-endpointdsl-starter
+camel-fhir-starter
 camel-file-starter
 camel-ftp-starter
 camel-gson-starter
 camel-hl7-starter
 camel-http-starter
 camel-http-common-starter
+camel-infinispan-starter
 camel-jackson-starter
 camel-jackson-avro-starter
 camel-jackson-protobuf-starter
@@ -49,6 +51,7 @@ camel-kafka-starter
 camel-kamelet-starter
 camel-kubernetes-starter
 camel-log-starter
+camel-mail-starter
 camel-main-starter
 camel-master-starter
 camel-microprofile-config-starter
@@ -59,7 +62,9 @@ camel-mock-starter
 camel-mongodb-starter
 camel-netty-starter
 camel-openapi-java-starter
+camel-paho-starter
 camel-platform-http-vertx-starter
+camel-quartz-starter
 camel-rest-starter
 camel-salesforce-starter
 camel-saxon-starter
@@ -76,3 +81,4 @@ camel-xml-io-starter
 camel-xml-io-dsl-starter
 camel-xpath-starter
 camel-yaml-dsl-starter
+camel-zipfile-starter
