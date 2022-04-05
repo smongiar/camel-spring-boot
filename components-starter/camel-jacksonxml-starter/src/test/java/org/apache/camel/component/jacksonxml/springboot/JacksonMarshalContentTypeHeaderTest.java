@@ -115,7 +115,7 @@ public class JacksonMarshalContentTypeHeaderTest {
                     JacksonXMLDataFormat format = new JacksonXMLDataFormat();
                     from("direct:yes").marshal(format);
 
-                    from("direct:yes2").marshal().jacksonXml();
+                    from("direct:yes2").marshal().jacksonxml();
 
                     JacksonXMLDataFormat formatNoHeader = new JacksonXMLDataFormat();
                     formatNoHeader.setContentTypeHeader(false);

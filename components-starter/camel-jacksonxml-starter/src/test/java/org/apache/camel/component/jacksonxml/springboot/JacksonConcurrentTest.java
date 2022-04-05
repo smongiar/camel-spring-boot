@@ -109,9 +109,9 @@ public class JacksonConcurrentTest {
             return new RouteBuilder() {
                 @Override
                 public void configure() {
-                    from("direct:start").marshal().jacksonXml().to("log:marshalled").to("direct:marshalled");
+                    from("direct:start").marshal().jacksonxml().to("log:marshalled").to("direct:marshalled");
 
-                    from("direct:marshalled").unmarshal().jacksonXml(TestPojo.class).to("mock:result");
+                    from("direct:marshalled").unmarshal().jacksonxml(TestPojo.class).to("mock:result");
                 }
             };
         }
