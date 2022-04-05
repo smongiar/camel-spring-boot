@@ -31,7 +31,7 @@ import org.apache.camel.Produce;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.mock.MockEndpoint;
-import org.apache.camel.dataformat.soap.SoapDataFormat;
+import org.apache.camel.dataformat.soap.SoapJaxbDataFormat;
 import org.apache.camel.dataformat.soap.name.ElementNameStrategy;
 import org.apache.camel.dataformat.soap.name.TypeNameStrategy;
 import org.apache.camel.dataformat.soap.springboot.TestUtil;
@@ -112,10 +112,10 @@ public class Soap12MarshalTest {
     /**
      * Create data format by using the constructor
      */
-    protected SoapDataFormat createDataFormat() {
+    protected SoapJaxbDataFormat createDataFormat() {
         String jaxbPackage = GetCustomersByName.class.getPackage().getName();
         ElementNameStrategy elStrat = new TypeNameStrategy();
-        SoapDataFormat answer = new SoapDataFormat(jaxbPackage, elStrat);
+        SoapJaxbDataFormat answer = new SoapJaxbDataFormat(jaxbPackage, elStrat);
         answer.setVersion("1.2");
         return answer;
     }
@@ -136,7 +136,7 @@ public class Soap12MarshalTest {
                 @Override
                 
                 public void configure() throws Exception {
-                    SoapDataFormat df = createDataFormat();
+                    SoapJaxbDataFormat df = createDataFormat();
                     from("direct:start") //
                             .marshal(df) //
                             .to("mock:result");

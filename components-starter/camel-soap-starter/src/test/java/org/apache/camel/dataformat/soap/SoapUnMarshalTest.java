@@ -95,7 +95,7 @@ public class SoapUnMarshalTest {
                 @Override
 
                 public void configure() throws Exception {
-                    SoapDataFormat dataFormate = new SoapDataFormat();
+                    SoapJaxbDataFormat dataFormate = new SoapJaxbDataFormat();
                     dataFormate.setContextPath(SERVICE_PACKAGE);
                     dataFormate
                         .setSchema("classpath:org/apache/camel/dataformat/soap/CustomerService.xsd,classpath:soap.xsd");

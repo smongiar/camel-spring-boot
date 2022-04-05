@@ -26,7 +26,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.Produce;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.component.mock.MockEndpoint;
-import org.apache.camel.dataformat.soap.SoapDataFormat;
+import org.apache.camel.dataformat.soap.SoapJaxbDataFormat;
 import org.apache.camel.dataformat.soap.name.ServiceInterfaceStrategy;
 import org.apache.camel.spring.boot.CamelAutoConfiguration;
 import org.junit.jupiter.api.Test;
@@ -68,8 +68,8 @@ public class Soap12SpringRoundtripTest {
     }
 
     @Bean("soap")
-    private SoapDataFormat getSoapDataFormat(ServiceInterfaceStrategy serviceInterfaceStrategy) {
-        SoapDataFormat soapDataFormat = new SoapDataFormat();
+    private SoapJaxbDataFormat getSoapJaxbDataFormat(ServiceInterfaceStrategy serviceInterfaceStrategy) {
+        SoapJaxbDataFormat soapDataFormat = new SoapJaxbDataFormat();
         soapDataFormat.setVersion("1.2");
         soapDataFormat.setContextPath("com.example.customerservice");
         soapDataFormat.setElementNameStrategy(serviceInterfaceStrategy);

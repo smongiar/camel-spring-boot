@@ -27,9 +27,9 @@ public class SoapMarshalSetterTest extends SoapMarshalTest {
      * Create Dataformat by using the setters
      */
     @Override
-    protected SoapDataFormat createDataFormat() {
+    protected SoapJaxbDataFormat createDataFormat() {
         String jaxbPackage = GetCustomersByName.class.getPackage().getName();
-        SoapDataFormat dataFormat = new SoapDataFormat();
+        SoapJaxbDataFormat dataFormat = new SoapJaxbDataFormat();
         dataFormat.setContextPath(jaxbPackage);
         dataFormat.setElementNameStrategy(null);
         return dataFormat;

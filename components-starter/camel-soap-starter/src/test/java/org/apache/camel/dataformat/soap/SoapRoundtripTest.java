@@ -91,8 +91,8 @@ public class SoapRoundtripTest {
                 @Override
                 public void configure() throws Exception {
                     ElementNameStrategy elNameStrat = new TypeNameStrategy();
-                    from("direct:start").marshal().soap(jaxbPackage, elNameStrat).unmarshal()
-                        .soap(jaxbPackage, elNameStrat).to("mock:result");
+                    from("direct:start").marshal().soapjaxb(jaxbPackage, elNameStrat).unmarshal()
+                        .soapjaxb(jaxbPackage, elNameStrat).to("mock:result");
                 }
             };
         }

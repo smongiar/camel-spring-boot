@@ -138,7 +138,7 @@ public class SoapCxfClientTest {
                 public void configure() throws Exception {
                     String jaxbPackage = GetCustomersByName.class.getPackage().getName();
                     ElementNameStrategy elNameStrat = new ServiceInterfaceStrategy(CustomerService.class, false);
-                    SoapDataFormat soapDataFormat = new SoapDataFormat(jaxbPackage, elNameStrat);
+                    SoapJaxbDataFormat soapDataFormat = new SoapJaxbDataFormat(jaxbPackage, elNameStrat);
                     getContext().setTracing(true);
                     from("direct:cxfclient") //
                             .onException(Exception.class).handled(true).marshal(soapDataFormat).end() //

@@ -106,10 +106,10 @@ public class SoapMarshalTest {
     /**
      * Create data format by using the constructor
      */
-    protected SoapDataFormat createDataFormat() {
+    protected SoapJaxbDataFormat createDataFormat() {
         String jaxbPackage = GetCustomersByName.class.getPackage().getName();
         ElementNameStrategy elStrat = new TypeNameStrategy();
-        return new SoapDataFormat(jaxbPackage, elStrat);
+        return new SoapJaxbDataFormat(jaxbPackage, elStrat);
     }
 
     
@@ -128,7 +128,7 @@ public class SoapMarshalTest {
                 @Override
                 
                 public void configure() throws Exception {
-                    SoapDataFormat df = createDataFormat();
+                    SoapJaxbDataFormat df = createDataFormat();
                     from("direct:start") //
                             .marshal(df) //
                             .to("mock:result");

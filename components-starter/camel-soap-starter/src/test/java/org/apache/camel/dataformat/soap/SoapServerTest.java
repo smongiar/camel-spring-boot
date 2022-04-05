@@ -99,7 +99,7 @@ public class SoapServerTest {
                 public void configure() throws Exception {
                     String jaxbPackage = GetCustomersByName.class.getPackage().getName();
                     ElementNameStrategy elNameStrat = new TypeNameStrategy();
-                    SoapDataFormat soapDataFormat = new SoapDataFormat(jaxbPackage, elNameStrat);
+                    SoapJaxbDataFormat soapDataFormat = new SoapJaxbDataFormat(jaxbPackage, elNameStrat);
                     CustomerServiceImpl serverBean = new CustomerServiceImpl();
                     from("direct:start").onException(Exception.class) // 
                             .handled(true) //
