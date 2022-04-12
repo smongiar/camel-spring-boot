@@ -128,7 +128,7 @@ class Ddb2StreamTest extends BaseDdb2{
     }
 
     private void insertItem(String key1, String msg1) {
-        final Map<String, AttributeValue> item = new HashMap<>() {
+        final Map<String, AttributeValue> item = new HashMap<String, AttributeValue>() {
             {
                 put("key", AttributeValue.builder()
                         .s(key1).build());
@@ -140,7 +140,7 @@ class Ddb2StreamTest extends BaseDdb2{
         template.sendBodyAndHeaders(
                 "aws2-ddb://" + tableName + "?operation=" + Ddb2Operations.PutItem,
                 null,
-                new HashMap<>() {
+                new HashMap<String, Object>() {
                     {
                         put(
                                 Ddb2Constants.CONSISTENT_READ,
