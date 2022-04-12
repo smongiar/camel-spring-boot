@@ -40,10 +40,4 @@
         <to uri="bean:userService?method=updateUser"/>
       </put>
 
-      <get path="/findAll" outType="org.apache.camel.openapi.User[]">
-        <description>Find all users</description>
-        <responseMessage message="All the found users"/>
-        <to uri="bean:userService?method=listUsers"/>
-      </get>
-
     </rest>

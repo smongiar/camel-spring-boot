@@ -26,7 +26,8 @@
         },
         "operationId" : "verb",
         "summary" : "Demo complex request type",
-        "x-camelContextId" : "camel"
+        "x-camelContextId" : "camel",
+        "x-routeId" : "route1"
       }
     }
   },
