@@ -18,5 +18,5 @@ package org.apache.camel.component.salesforce.springboot.dto.generated;
 
 import org.apache.camel.component.salesforce.api.dto.AbstractQueryRecordsBase;
 
-public class QueryRecordsContact extends AbstractQueryRecordsBase<Contact> {
+public class QueryRecordsContact extends AbstractQueryRecordsBase {
 }

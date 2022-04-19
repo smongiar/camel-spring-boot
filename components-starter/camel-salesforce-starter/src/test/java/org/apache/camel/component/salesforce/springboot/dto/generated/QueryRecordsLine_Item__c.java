@@ -19,6 +19,6 @@ package org.apache.camel.component.salesforce.springboot.dto.generated;
 import org.apache.camel.component.salesforce.api.dto.AbstractQueryRecordsBase;
 
 //CHECKSTYLE:OFF
-public class QueryRecordsLine_Item__c extends AbstractQueryRecordsBase<Line_Item__c> {
+public class QueryRecordsLine_Item__c extends AbstractQueryRecordsBase {
 }
 //CHECKSTYLE:ON
