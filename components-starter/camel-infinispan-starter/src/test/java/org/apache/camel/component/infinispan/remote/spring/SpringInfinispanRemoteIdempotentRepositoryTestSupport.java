@@ -20,10 +20,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.ProducerTemplate;
-import org.apache.camel.component.infinispan.remote.InfinispanRemoteIdempotentRepository;
-import org.apache.camel.component.infinispan.remote.InfinispanRemoteManager;
 import org.apache.camel.component.mock.MockEndpoint;
-import org.apache.camel.spi.IdempotentRepository;
 import org.apache.camel.test.infra.infinispan.services.InfinispanService;
 import org.apache.camel.test.infra.infinispan.services.InfinispanServiceFactory;
 
@@ -37,8 +34,6 @@ import org.infinispan.client.hotrod.configuration.ConfigurationBuilder;
 import org.infinispan.client.hotrod.marshall.MarshallerUtil;
 import org.infinispan.query.remote.client.impl.MarshallerRegistration;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 
 import java.util.UUID;
 

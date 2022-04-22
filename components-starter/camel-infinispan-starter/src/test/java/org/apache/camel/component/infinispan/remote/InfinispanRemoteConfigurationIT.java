@@ -31,7 +31,7 @@ import org.junit.jupiter.api.extension.RegisterExtension;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.annotation.DirtiesContext;
-import org.testcontainers.shaded.org.apache.commons.lang3.SystemUtils;
+import org.testcontainers.shaded.org.apache.commons.lang.SystemUtils;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertNull;

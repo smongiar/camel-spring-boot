@@ -38,7 +38,7 @@ import org.infinispan.configuration.cache.CacheMode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Lazy;
-import org.testcontainers.shaded.org.apache.commons.lang3.SystemUtils;
+import org.testcontainers.shaded.org.apache.commons.lang.SystemUtils;
 
 import java.util.Properties;
 
