@@ -1,7 +1,6 @@
 camel-spring-boot-engine-starter 
 camel-spring-boot-starter        
 camel-spring-boot-xml-starter
-camel-attachments-starter
 camel-avro-starter
 camel-aws2-cw-starter
 camel-aws2-ddb-starter
@@ -12,7 +11,6 @@ camel-aws2-sns-starter
 camel-aws2-sqs-starter
 camel-azure-storage-blob-starter
 camel-azure-storage-queue-starter
-camel-base-starter
 camel-bean-starter
 camel-bean-validator-starter
 camel-bindy-starter
@@ -63,7 +61,7 @@ camel-mongodb-starter
 camel-netty-starter
 camel-openapi-java-starter
 camel-paho-starter
-camel-platform-http-vertx-starter
+camel-http-vertx-starter
 camel-quartz-starter
 camel-rest-starter
 camel-salesforce-starter
