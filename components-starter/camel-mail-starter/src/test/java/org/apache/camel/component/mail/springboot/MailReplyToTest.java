@@ -70,7 +70,7 @@ public class MailReplyToTest {
         String body = "The Camel riders";
 
         mock.expectedMessageCount(1);
-        mock.expectedHeaderReceived(MailConstants.MAIL_REPLY_TO, "noReply1@localhost, noReply2@localhost");
+        mock.expectedHeaderReceived("reply-to", "noReply1@localhost, noReply2@localhost");
         mock.expectedBodiesReceived(body);
 
         template.sendBody("direct:b", body);

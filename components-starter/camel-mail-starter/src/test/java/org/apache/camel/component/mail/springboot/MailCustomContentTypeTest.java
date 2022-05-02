@@ -97,7 +97,7 @@ public class MailCustomContentTypeTest {
     public void testNullBody() throws Exception {
         Mailbox.clearAll();
 
-        template.sendBodyAndHeader("direct:b", null, MailConstants.MAIL_CONTENT_TYPE, "text/plain; charset=iso-8859-1");
+        template.sendBodyAndHeader("direct:b", null, "contentType", "text/plain; charset=iso-8859-1");
 
         Mailbox box = Mailbox.get("claus@localhost");
         Message msg = box.get(0);
@@ -109,7 +109,7 @@ public class MailCustomContentTypeTest {
     public void testSendPlainMailContentTypeInHeader() throws Exception {
         Mailbox.clearAll();
 
-        template.sendBodyAndHeader("direct:b", "Hello World", MailConstants.MAIL_CONTENT_TYPE,
+        template.sendBodyAndHeader("direct:b", "Hello World", "contentType",
                 "text/plain; charset=iso-8859-1");
 
         Mailbox box = Mailbox.get("claus@localhost");
@@ -135,7 +135,7 @@ public class MailCustomContentTypeTest {
         Mailbox.clearAll();
 
         // Camel will fixup the Content-Type if you do not have a space after the semi colon
-        template.sendBodyAndHeader("direct:b", "Hello World", MailConstants.MAIL_CONTENT_TYPE, "text/plain;charset=iso-8859-1");
+        template.sendBodyAndHeader("direct:b", "Hello World", "contentType", "text/plain;charset=iso-8859-1");
 
         Mailbox box = Mailbox.get("claus@localhost");
         Message msg = box.get(0);

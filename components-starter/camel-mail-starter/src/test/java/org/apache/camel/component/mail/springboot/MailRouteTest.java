@@ -83,7 +83,7 @@ public class MailRouteTest {
         mock.expectedBodiesReceived("hello world!");
 
         Map<String, Object> headers = new HashMap<>();
-        headers.put(MailConstants.MAIL_REPLY_TO, "route-test-reply@localhost");
+        headers.put("reply-to", "route-test-reply@localhost");
         template.sendBodyAndHeaders("smtp://route-test-james@localhost", "hello world!", headers);
 
         // lets test the first sent worked
@@ -94,7 +94,7 @@ public class MailRouteTest {
 
         // Validate that the headers were preserved.
         Exchange exchange = mock.getReceivedExchanges().get(0);
-        String replyTo = (String) exchange.getIn().getHeader(MailConstants.MAIL_REPLY_TO);
+        String replyTo = (String) exchange.getIn().getHeader("reply-to");
         assertEquals("route-test-reply@localhost", replyTo);
 
         assertMailboxReceivedMessages("route-test-copy@localhost");

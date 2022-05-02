@@ -594,7 +594,7 @@ public class MimeMultipartDataFormatTest {
                     from("direct:roundtripinlineheaders").marshal().mimeMultipart(false, true, false)
                             .to("log:mime?showHeaders=true").unmarshal().mimeMultipart(false, true, false);
                     from("direct:roundtripbinarycontent").marshal().mimeMultipart(false, false, true)
-                            .to("log:mime?showHeaders=true").to("dataformat:mimeMultipart:unmarshal");
+                            .to("log:mime?showHeaders=true").to("dataformat:mime-multipart:unmarshal");
                     from("direct:marshalonlyrelated").marshal().mimeMultipart("related");
                     from("direct:marshalonlymixed").marshal().mimeMultipart();
                     from("direct:marshalonlyinlineheaders").marshal().mimeMultipart("mixed", false, true, "(included|x-.*)", false);
