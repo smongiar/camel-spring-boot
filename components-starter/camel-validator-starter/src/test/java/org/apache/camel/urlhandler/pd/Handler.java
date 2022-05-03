@@ -63,7 +63,7 @@ public class Handler extends ResourceResolverSupport {
 
 	@Override
 	protected Resource createResource(String location, String remaining) {
-		return new ResourceSupport("mem", location) {
+		return new ResourceSupport("mem" + location) {
 			@Override
 			public boolean exists() {
 				return true;
