@@ -181,6 +181,10 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
                             && dep.getArtifactId().endsWith("-starter"));
             getLog().debug(dep + (accept ? " included in the BOM" : " excluded from BOM"));
 
+            if (dep.getArtifactId().startsWith("camel-") && dep.getArtifactId().endsWith("-parent")) {
+                dep.setType("pom");
+            }
+
             // skip test-jars
             boolean testJar = dep.getType() != null && dep.getType().equals("test-jar");
             boolean sourcesJar = dep.getClassifier() != null && dep.getClassifier().equals("sources");
@@ -252,7 +256,7 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
         dep = new Dependency();
         dep.setGroupId("org.apache.camel.springboot");
         dep.setArtifactId("camel-xml-jaxb-dsl-starter");
-        dep.setVersion("${project.version}");
+        dep.setVersion("${camel-community.version}");
         outDependencies.add(dep);
         dep = new Dependency();
         dep.setGroupId("org.apache.camel.springboot");
