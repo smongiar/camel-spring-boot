@@ -79,9 +79,9 @@ public class QuartzSimpleRouteTest extends BaseQuartzTest {
         assertThat(detail.getJobClass().equals(CamelJob.class), CoreMatchers.is(true));
 
         assertThat(detail.getJobDataMap().get(QuartzConstants.QUARTZ_TRIGGER_TYPE).equals("simple"), CoreMatchers.is(true));
-        assertThat(detail.getJobDataMap().get(QuartzConstants.QUARTZ_TRIGGER_SIMPLE_REPEAT_COUNTER).equals("-1"),
+        assertThat(String.valueOf(detail.getJobDataMap().get(QuartzConstants.QUARTZ_TRIGGER_SIMPLE_REPEAT_COUNTER)).equals("-1"),
                 CoreMatchers.is(true));
-        assertThat(detail.getJobDataMap().get(QuartzConstants.QUARTZ_TRIGGER_SIMPLE_REPEAT_INTERVAL).equals("100"),
+        assertThat(String.valueOf(detail.getJobDataMap().get(QuartzConstants.QUARTZ_TRIGGER_SIMPLE_REPEAT_INTERVAL)).equals("100"),
                 CoreMatchers.is(true));
     }
     
