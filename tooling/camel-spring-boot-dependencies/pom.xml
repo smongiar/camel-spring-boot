@@ -694,11 +694,6 @@
       </dependency>
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
-        <artifactId>camel-elasticsearch-rest-starter</artifactId>
-        <version>3.14.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.camel.springboot</groupId>
         <artifactId>camel-elsql-starter</artifactId>
         <version>3.14.2</version>
       </dependency>
@@ -2618,11 +2613,6 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-ehcache</artifactId>
-        <version>3.14.2</version>
-      </dependency>
-      <dependency>
-        <groupId>org.apache.camel</groupId>
-        <artifactId>camel-elasticsearch-rest</artifactId>
         <version>3.14.2</version>
       </dependency>
       <dependency>

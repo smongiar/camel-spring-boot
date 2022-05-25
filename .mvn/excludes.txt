@@ -72,7 +72,6 @@
 :camel-drill-starter
 :camel-dropbox-starter
 :camel-ehcache-starter
-:camel-elasticsearch-rest-starter
 :camel-elsql-starter
 :camel-etcd-starter
 :camel-etcd3-starter
