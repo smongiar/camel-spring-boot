@@ -127,6 +127,7 @@
         <groovy-version>3.0.6</groovy-version>
         <hadoop2-version>2.7.4</hadoop2-version>
         <jakarta-jaxb-version>2.3.2</jakarta-jaxb-version>
+        <javax-inject-version>1.0.0.redhat-00008</javax-inject-version>
         <jaxb-version>2.3.0</jaxb-version>
         <jetty9-version>9.4.32.v20200930</jetty9-version>
         <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
@@ -139,6 +140,31 @@
         <undertow-version>2.2.0.Final</undertow-version>
         <camel-spring-boot-community.version>3.14.2</camel-spring-boot-community.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>hapi-fhir</artifactId>
+                <version>${hapi-fhir-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>hapi-deployable-pom </artifactId>
+                <version>${hapi-fhir-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>ca.uhn.hapi.fhir</groupId>
+                <artifactId>hapi-fhir-base</artifactId>
+                <version>${hapi-fhir-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${javax-inject-version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
     <!-- Comment out the snapshot repositories as we don't need them now -->
