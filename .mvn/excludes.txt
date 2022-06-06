@@ -180,7 +180,6 @@
 :camel-opentelemetry-starter
 :camel-opentracing-starter
 :camel-optaplanner-starter
-:camel-paho-mqtt5-starter
 :camel-pdf-starter
 :camel-pg-replication-slot-starter
 :camel-pgevent-starter

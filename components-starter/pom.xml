@@ -338,7 +338,7 @@
     <!-- <module>camel-opentelemetry-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-opentracing-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-optaplanner-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-paho-mqtt5-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-paho-mqtt5-starter</module>
     <module>camel-paho-starter</module>
     <!-- <module>camel-pdf-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-pg-replication-slot-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
