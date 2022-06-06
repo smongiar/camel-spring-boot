@@ -124,20 +124,20 @@
         <asciidoctorj-version>2.3.0</asciidoctorj-version>
         <avro-version>1.8.1</avro-version>
         <glassfish-jaxb-runtime-version>${jakarta-jaxb-version}</glassfish-jaxb-runtime-version>
-        <groovy-version>3.0.6</groovy-version>
+        <groovy-version>3.0.10</groovy-version>
         <hadoop2-version>2.7.4</hadoop2-version>
         <jakarta-jaxb-version>2.3.2</jakarta-jaxb-version>
         <javax-inject-version>1.0.0.redhat-00008</javax-inject-version>
         <jaxb-version>2.3.0</jaxb-version>
         <jetty9-version>9.4.32.v20200930</jetty9-version>
         <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
-        <maven-javadoc-plugin-version>3.2.0</maven-javadoc-plugin-version>
+        <maven-javadoc-plugin-version>3.3.2</maven-javadoc-plugin-version>
         <maven-surefire-plugin-version>3.0.0-M4</maven-surefire-plugin-version>
         <mycila-license-version>3.0</mycila-license-version>
         <springdoc-version>1.5.12</springdoc-version>
         <surefire.version>${maven-surefire-plugin-version}</surefire.version>
         <swagger-parser-v3-version>2.0.28</swagger-parser-v3-version>
-        <undertow-version>2.2.0.Final</undertow-version>
+        <undertow-version>2.2.17.Final</undertow-version>
         <camel-spring-boot-community.version>3.14.2</camel-spring-boot-community.version>
     </properties>
 
