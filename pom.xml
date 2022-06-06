@@ -108,13 +108,13 @@
         <compiler.fork>false</compiler.fork>
 
         <!-- Spring-Boot target version -->
-        <spring-boot-version>2.6.6</spring-boot-version>
+        <spring-boot-version>2.6.8</spring-boot-version>
 
         <!-- Camel target version -->
         <camel-version>3.14.2.redhat-00048</camel-version>
 
         <!-- cq plugin version -->
-        <cq-plugin.version>2.31.0</cq-plugin.version>
+        <cq-plugin.version>2.31.1</cq-plugin.version>
         <camel-community.version>3.14.2</camel-community.version>
 
         <!-- versions -->
