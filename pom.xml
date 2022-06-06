@@ -108,7 +108,7 @@
         <compiler.fork>false</compiler.fork>
 
         <!-- Spring-Boot target version -->
-        <spring-boot-version>2.6.8</spring-boot-version>
+        <spring-boot-version>2.7.0</spring-boot-version>
 
         <!-- Camel target version -->
         <camel-version>3.14.2.redhat-00048</camel-version>
@@ -129,9 +129,9 @@
         <jakarta-jaxb-version>2.3.2</jakarta-jaxb-version>
         <javax-inject-version>1.0.0.redhat-00008</javax-inject-version>
         <jaxb-version>2.3.0</jaxb-version>
-        <jetty9-version>9.4.32.v20200930</jetty9-version>
-        <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
-        <maven-javadoc-plugin-version>3.3.2</maven-javadoc-plugin-version>
+        <jetty9-version>9.4.46.v20220331</jetty9-version>
+        <maven-compiler-plugin-version>3.10.1</maven-compiler-plugin-version>
+        <maven-javadoc-plugin-version>3.4.0</maven-javadoc-plugin-version>
         <maven-surefire-plugin-version>3.0.0-M4</maven-surefire-plugin-version>
         <mycila-license-version>3.0</mycila-license-version>
         <springdoc-version>1.5.12</springdoc-version>
