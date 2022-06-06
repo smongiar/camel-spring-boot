@@ -61,6 +61,7 @@ camel-mongodb-starter
 camel-netty-starter
 camel-openapi-java-starter
 camel-paho-starter
+camel-paho-mqtt5-starter
 camel-http-vertx-starter
 camel-quartz-starter
 camel-rest-starter
