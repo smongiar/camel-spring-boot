@@ -147,11 +147,13 @@
                 <groupId>ca.uhn.hapi.fhir</groupId>
                 <artifactId>hapi-fhir</artifactId>
                 <version>${hapi-fhir-version}</version>
+                <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>ca.uhn.hapi.fhir</groupId>
-                <artifactId>hapi-deployable-pom </artifactId>
+                <artifactId>hapi-deployable-pom</artifactId>
                 <version>${hapi-fhir-version}</version>
+                <type>pom</type>
             </dependency>
             <dependency>
                 <groupId>ca.uhn.hapi.fhir</groupId>
