@@ -34,11 +34,13 @@
         <groupId>ca.uhn.hapi.fhir</groupId>
         <artifactId>hapi-deployable-pom</artifactId>
         <version>4.1.0</version>
+        <type>pom</type>
       </dependency>
       <dependency>
         <groupId>ca.uhn.hapi.fhir</groupId>
         <artifactId>hapi-fhir</artifactId>
         <version>4.1.0</version>
+        <type>pom</type>
       </dependency>
       <dependency>
         <groupId>ca.uhn.hapi.fhir</groupId>
