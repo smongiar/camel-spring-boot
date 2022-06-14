@@ -28,6 +28,7 @@ import org.apache.camel.test.spring.junit5.CamelSpringBootTest;
 import org.apache.kafka.clients.producer.ProducerRecord;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Bean;
@@ -46,6 +47,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
                 KafkaConsumerTopicIsPatternIT.TestConfiguration.class,
         }
 )
+@Disabled("Don't run this on CI")
 public class KafkaConsumerTopicIsPatternIT extends BaseEmbeddedKafkaTestSupport {
 
     public static final String TOPIC = "vess123d";
