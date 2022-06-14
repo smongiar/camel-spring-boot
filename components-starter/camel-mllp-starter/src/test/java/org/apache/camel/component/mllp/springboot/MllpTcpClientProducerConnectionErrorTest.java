@@ -233,6 +233,7 @@ public class MllpTcpClientProducerConnectionErrorTest {
                 "Either a write or a receive exception should have been be thrown");
     }
 
+    @Ignore
     @Test()
     public void testConnectionCloseAndServerShutdownBeforeSendingHL7Message() throws Exception {
         MockEndpoint.resetMocks(context);
