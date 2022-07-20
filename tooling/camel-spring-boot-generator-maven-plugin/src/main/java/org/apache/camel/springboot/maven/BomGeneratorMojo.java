@@ -85,7 +85,7 @@ public class BomGeneratorMojo extends AbstractMojo {
     @Parameter(property = "bom.camelCommunityVersion", defaultValue = "${camel-spring-boot-community.version}")
     protected String camelCommunityVersion;
 
-    @Parameter(property = "bom.narayanaSpringBoootVersion", defaultValue = "${narayana-spring-boot.version}")
+    @Parameter(property = "bom.narayanaSpringBootVersion", defaultValue = "${narayana-spring-boot.version}")
     protected String narayanaSpringBootVersion;
 
     @Parameter(property = "bom.camelVersion", defaultValue = "${camel-version}")
