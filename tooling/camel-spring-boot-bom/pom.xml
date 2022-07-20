@@ -1784,6 +1784,21 @@
         <version>3.14.2</version>
       </dependency>
       <dependency>
+        <groupId>me.snowdrop</groupId>
+        <artifactId>narayana-spring-boot-starter</artifactId>
+        <version>2.6.5.redhat-00004</version>
+      </dependency>
+      <dependency>
+        <groupId>me.snowdrop</groupId>
+        <artifactId>narayana-spring-boot-core</artifactId>
+        <version>2.6.5.redhat-00004</version>
+      </dependency>
+      <dependency>
+        <groupId>me.snowdrop</groupId>
+        <artifactId>narayana-spring-boot-recovery-controller</artifactId>
+        <version>2.6.5.redhat-00004</version>
+      </dependency>
+      <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-management</artifactId>
         <version>3.14.2</version>
