@@ -274,18 +274,6 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
         dep.setVersion(narayanaSpringBootVersion);
         outDependencies.add(dep);
 
-        dep = new Dependency();
-        dep.setGroupId("me.snowdrop");
-        dep.setArtifactId("narayana-spring-boot-core");
-        dep.setVersion(narayanaSpringBootVersion);
-        outDependencies.add(dep);
-
-        dep = new Dependency();
-        dep.setGroupId("me.snowdrop");
-        dep.setArtifactId("narayana-spring-boot-recovery-controller");
-        dep.setVersion(narayanaSpringBootVersion);
-        outDependencies.add(dep);
-
         outDependencies.sort(Comparator.comparing(d -> (d.getGroupId() + ":" + d.getArtifactId())));
 
         return outDependencies;
