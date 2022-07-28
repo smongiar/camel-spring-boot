@@ -199,6 +199,16 @@
         <version>1.0.0.redhat-00008</version>
       </dependency>
       <dependency>
+        <groupId>me.snowdrop</groupId>
+        <artifactId>narayana-spring-boot-core</artifactId>
+        <version>2.6.5.redhat-00004</version>
+      </dependency>
+      <dependency>
+        <groupId>me.snowdrop</groupId>
+        <artifactId>narayana-spring-boot-starter</artifactId>
+        <version>2.6.5.redhat-00004</version>
+      </dependency>
+      <dependency>
         <groupId>net.sf.saxon</groupId>
         <artifactId>Saxon-HE</artifactId>
         <version>9.9.1-8</version>
@@ -1917,7 +1927,7 @@
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
         <artifactId>camel-xml-jaxp-starter</artifactId>
-        <version>3.14.4</version>
+        <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
