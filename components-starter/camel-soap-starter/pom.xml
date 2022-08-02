@@ -48,13 +48,13 @@
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-cxf-spring-transport</artifactId>
-      <version>3.14.2-SNAPSHOT</version>
+      <version>3.14.4-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.apache.camel</groupId>
       <artifactId>camel-cxf-soap</artifactId>
-      <version>3.14.2-SNAPSHOT</version>
+      <version>3.14.4-SNAPSHOT</version>
       <scope>test</scope>
     </dependency>
     <dependency>
