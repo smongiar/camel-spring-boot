@@ -23,6 +23,9 @@ camel-core-engine-starter
 camel-core-languages-starter
 camel-core-processor-starter
 camel-cron-starter
+camel-cxf-rest-starter
+camel-cxf-soap-starter
+camel-cxf-transport-starter
 camel-dependencies-starter
 camel-dependencies-generator-starter
 camel-direct-starter
