@@ -55,8 +55,6 @@
 :camel-crypto-starter
 :camel-csimple-joor-starter
 :camel-csv-starter
-:camel-cxf-starter
-:camel-cxf-transport-starter
 :camel-datasonnet-starter
 :camel-debezium-mongodb-starter
 :camel-debezium-mysql-starter
