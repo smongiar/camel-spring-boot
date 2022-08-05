@@ -52,6 +52,7 @@ camel-kafka-starter
 camel-kamelet-starter
 camel-kubernetes-starter
 camel-log-starter
+camel-lra-starter
 camel-mail-starter
 camel-main-starter
 camel-master-starter
@@ -68,6 +69,7 @@ camel-paho-mqtt5-starter
 camel-http-vertx-starter
 camel-quartz-starter
 camel-rest-starter
+camel-saga-starter
 camel-salesforce-starter
 camel-saxon-starter
 camel-seda-starter
