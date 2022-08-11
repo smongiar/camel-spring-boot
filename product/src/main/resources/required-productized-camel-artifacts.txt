@@ -83,6 +83,7 @@ camel-timer-starter
 camel-webhook-starter
 camel-xml-io-starter
 camel-xml-io-dsl-starter
+camel-xml-jaxp-starter
 camel-xpath-starter
 camel-yaml-dsl-starter
 camel-zipfile-starter
