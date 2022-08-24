@@ -7,7 +7,7 @@
 * A file defining which Camel artifacts are required by Camel Quarkus product branch
 * Used by `org.l2x6.cq:cq-camel-spring-boot-prod-maven-plugin:camel-spring-boot-prod-excludes` and `org.l2x6.cq:cq-camel-spring-boot-prod-maven-plugin:camel-spring-boot-prod-excludes-check` mojos
 * `required-productized-camel-artifacts.txt` should be copied verbatim from the corresponding Camel Spring Boot prod branch, such as
-  https://github.com/jboss-fuse/camel-spring-boot/blob/camel-spring-boot-3.14.4-branch/product/src/main/generated/required-productized-camel-artifacts.txt
+  https://github.com/jboss-fuse/camel-spring-boot/blob/camel-spring-boot-3.14.5-branch/product/src/main/generated/required-productized-camel-artifacts.txt
 
 == Changes in `required-productized-camel-artifacts.txt`
 

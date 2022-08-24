@@ -354,7 +354,7 @@ public class FhirCustomClientConfigurationIT extends AbstractFhirTestSupport {
         }
 
         @Override
-        public void registerInterceptor(IClientInterceptor theInterceptor) {
+        public void registerInterceptor(Object theInterceptor) {
 
         }
 
@@ -389,7 +389,7 @@ public class FhirCustomClientConfigurationIT extends AbstractFhirTestSupport {
         }
 
         @Override
-        public void unregisterInterceptor(IClientInterceptor theInterceptor) {
+        public void unregisterInterceptor(Object theInterceptor) {
 
         }
 
