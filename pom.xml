@@ -111,7 +111,7 @@
         <spring-boot-version>2.7.3</spring-boot-version>
 
         <!-- Camel target version -->
-        <camel-version>3.14.4.redhat-00011</camel-version>
+        <camel-version>3.14.5.redhat-00002</camel-version>
 
         <!-- cq plugin version -->
         <cq-plugin.version>2.32.0</cq-plugin.version>
