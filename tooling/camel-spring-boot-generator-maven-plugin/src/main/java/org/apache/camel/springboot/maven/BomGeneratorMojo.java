@@ -106,6 +106,10 @@ public class BomGeneratorMojo extends AbstractMojo {
 
         HashMap<String, Boolean> productizedArtifacts = RequiredProductizedArtifactsReader.getProductizedCSBArtifacts(requiredProductizedCamelSpringBootArtifactsFile);
 
+        for (String s : productizedArtifacts.keySet()) {
+            System.out.println("Starter [" + s  + "] " + productizedArtifacts.get(s));
+        }
+
         Files.list(startersDir.toPath())
                 .filter(Files::isDirectory)
                 // must have a pom.xml to be active
