@@ -114,7 +114,7 @@
         <camel-version>3.18.1</camel-version>
 
         <!-- cq plugin version -->
-        <cq-plugin.version>2.21.0</cq-plugin.version>
+        <cq-plugin.version>2.32.0</cq-plugin.version>
         <camel-community.version>3.18.1</camel-community.version>
 
         <!-- versions -->
