@@ -373,7 +373,7 @@
     <module>camel-seda-starter</module>
     <!-- <module>camel-service-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-servicenow-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
-    <!-- <module>camel-servlet-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
+    <module>camel-servlet-starter</module>
     <!-- <module>camel-shiro-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-sip-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->
     <!-- <module>camel-sjms-starter</module> disabled by camel-spring-boot-prod-maven-plugin:camel-prod-excludes -->

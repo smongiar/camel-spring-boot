@@ -1587,7 +1587,7 @@
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
         <artifactId>camel-servlet-starter</artifactId>
-        <version>3.14.5</version>
+        <version>${project.version}</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel.springboot</groupId>
@@ -2007,7 +2007,7 @@
       <dependency>
         <groupId>org.apache.camel.tests</groupId>
         <artifactId>org.apache.camel.tests.mock-javamail_1.7</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2027,7 +2027,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-allcomponents</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -2043,7 +2043,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-api</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2104,12 +2104,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-attachments</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-avro</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2119,7 +2119,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-avro-rpc-component</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2140,12 +2140,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-avro-spi</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -2166,12 +2166,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-cw</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-ddb</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2201,7 +2201,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-kinesis</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2211,7 +2211,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-lambda</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2226,7 +2226,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-s3</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2236,12 +2236,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-sns</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-aws2-sqs</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2266,7 +2266,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-azure-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -2277,7 +2277,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-azure-storage-blob</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2287,7 +2287,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-azure-storage-queue</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2297,12 +2297,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-base</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-base-engine</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2312,12 +2312,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-bean</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-bean-validator</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2332,7 +2332,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-bindy</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2363,7 +2363,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-browse</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2378,12 +2378,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cassandraql</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-catalog</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2418,12 +2418,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cloud</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cluster</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2448,7 +2448,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-componentdsl</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2458,7 +2458,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-controlbus</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2468,37 +2468,37 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core-catalog</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core-engine</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core-languages</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core-model</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core-processor</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-core-reifier</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2518,7 +2518,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cron</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2538,57 +2538,57 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-common</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-rest</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-soap</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-spring-common</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-spring-rest</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-spring-soap</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-spring-transport</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-cxf-transport</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-dataformat</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-dataset</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2609,7 +2609,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-debezium-maven-plugin</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2645,12 +2645,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-direct</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-directvm</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2690,7 +2690,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-dsl-support</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2715,7 +2715,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-endpointdsl</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2745,23 +2745,23 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-fhir</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-fhir-api</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-fhir-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-file</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2791,7 +2791,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-ftp</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2902,7 +2902,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-gson</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -2932,27 +2932,27 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-health</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-hl7</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-http</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-http-base</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-http-common</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3018,12 +3018,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-infinispan</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-infinispan-common</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3033,7 +3033,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-infinispan-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -3064,22 +3064,22 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jackson</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jackson-avro</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jackson-protobuf</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jacksonxml</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3089,12 +3089,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-java-joor-dsl</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jaxb</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3154,12 +3154,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jira</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jms</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3234,7 +3234,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jsonpath</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3244,17 +3244,17 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-jta</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-kafka</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-kamelet</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3274,7 +3274,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-kubernetes</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3284,7 +3284,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-language</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3309,12 +3309,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-log</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-lra</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3334,12 +3334,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-mail</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-main</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3349,12 +3349,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-management-api</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-master</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3369,27 +3369,27 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-microprofile-config</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-microprofile-fault-tolerance</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-microprofile-health</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-microprofile-metrics</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-microprofile-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -3410,17 +3410,17 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-mllp</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-mock</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-mongodb</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3460,7 +3460,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-netty</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3522,7 +3522,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-openapi-java</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3547,12 +3547,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-paho</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-paho-mqtt5</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3572,12 +3572,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-platform-http</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-platform-http-vertx</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3602,7 +3602,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-quartz</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3637,7 +3637,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-ref</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3652,7 +3652,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-rest</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3697,22 +3697,22 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-saga</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-salesforce</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-salesforce-maven-plugin</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-salesforce-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -3723,12 +3723,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-saxon</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-scheduler</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3738,7 +3738,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-seda</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3753,7 +3753,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-servicenow-maven-plugin</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3764,7 +3764,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-servlet</artifactId>
-        <version>3.14.5</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3789,7 +3789,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-slack</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3809,7 +3809,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-soap</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3899,7 +3899,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-sql</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3934,12 +3934,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-stub</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-support</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3964,7 +3964,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-telegram</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -3979,12 +3979,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-test-junit5</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-test-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -3995,7 +3995,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-test-spring-junit5</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4035,17 +4035,17 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-timer</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-tooling-model</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-tooling-util</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4080,17 +4080,17 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-util</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-util-json</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-validator</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4105,7 +4105,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-vertx-common</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4120,7 +4120,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-vertx-parent</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
         <type>pom</type>
       </dependency>
       <dependency>
@@ -4131,7 +4131,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-vm</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4146,7 +4146,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-webhook</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4186,22 +4186,22 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xml-io</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xml-io-dsl</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xml-io-util</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xml-jaxb</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4211,7 +4211,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xml-jaxp</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4226,12 +4226,12 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xpath</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-xslt</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4246,17 +4246,17 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-yaml-dsl</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-yaml-dsl-common</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-yaml-dsl-deserializers</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4276,7 +4276,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>camel-zipfile</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.camel</groupId>
@@ -4296,7 +4296,7 @@
       <dependency>
         <groupId>org.apache.camel</groupId>
         <artifactId>spi-annotations</artifactId>
-        <version>3.14.5.redhat-00004</version>
+        <version>3.14.5.redhat-00006</version>
       </dependency>
       <dependency>
         <groupId>org.apache.cassandra</groupId>

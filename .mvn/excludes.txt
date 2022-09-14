@@ -201,7 +201,6 @@
 :camel-schematron-starter
 :camel-service-starter
 :camel-servicenow-starter
-:camel-servlet-starter
 :camel-shiro-starter
 :camel-sip-starter
 :camel-sjms-starter
