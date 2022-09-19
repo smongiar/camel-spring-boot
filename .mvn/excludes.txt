@@ -157,6 +157,7 @@
 :camel-ldap-starter
 :camel-ldif-starter
 :camel-leveldb-starter
+:camel-lra-starter
 :camel-lucene-starter
 :camel-lumberjack-starter
 :camel-lzf-starter
