@@ -117,6 +117,9 @@
         <cq-plugin.version>2.32.0</cq-plugin.version>
         <camel-community.version>3.18.3</camel-community.version>
 
+        <!-- narayana spring boot version -->
+        <narayana-spring-boot.version>2.6.5.redhat-00004</narayana-spring-boot.version>
+
         <!-- versions -->
         <aether-version>1.0.2.v20150114</aether-version>
         <arquillian-container-se-managed-version>1.0.2.Final</arquillian-container-se-managed-version>
@@ -128,6 +131,7 @@
         <hadoop2-version>2.10.0</hadoop2-version>
         <jakarta-jaxb-version>3.0.1</jakarta-jaxb-version>
         <jaxb-version>2.3.0</jaxb-version>
+        <javax-inject-version>1.0.0.redhat-00008</javax-inject-version>
         <jetty9-version>9.4.45.v20220203</jetty9-version>
         <maven-compiler-plugin-version>3.10.1</maven-compiler-plugin-version>
         <maven-javadoc-plugin-version>3.2.0</maven-javadoc-plugin-version>
@@ -139,6 +143,26 @@
         <undertow-version>2.2.16.Final</undertow-version>
         <camel-spring-boot-community.version>3.18.3</camel-spring-boot-community.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>javax.inject</groupId>
+                <artifactId>javax.inject</artifactId>
+                <version>${javax-inject-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.snowdrop</groupId>
+                <artifactId>narayana-spring-boot-core</artifactId>
+                <version>${narayana-spring-boot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>me.snowdrop</groupId>
+                <artifactId>narayana-spring-boot-recovery-controller</artifactId>
+                <version>${narayana-spring-boot.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
     <!-- Comment out the snapshot repositories as we don't need them now -->
