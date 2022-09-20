@@ -58,7 +58,6 @@ camel-kamelet-starter
 camel-kubernetes-starter
 camel-language-starter
 camel-log-starter
-camel-lra-starter
 camel-mail-starter
 camel-main-starter
 camel-master-starter
