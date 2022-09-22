@@ -43,7 +43,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.apache.camel.test.spring.junit5.CamelSpringBootTest;
 import org.apache.cxf.endpoint.Client;
-import org.apache.cxf.feature.LoggingFeature;
+import org.apache.cxf.ext.logging.LoggingFeature;
 import org.apache.cxf.frontend.ClientFactoryBean;
 import org.apache.cxf.frontend.ClientProxy;
 import org.apache.cxf.jaxws.JaxWsProxyFactoryBean;
@@ -51,7 +51,6 @@ import org.apache.cxf.spring.boot.autoconfigure.CxfAutoConfiguration;
 import org.apache.cxf.testutil.common.TestUtil;
 import org.apache.cxf.transport.http.HTTPConduit;
 import org.apache.cxf.transports.http.configuration.HTTPClientPolicy;
-import org.apache.cxf.ws.rm.RM11Constants;
 import org.apache.cxf.ws.rm.manager.AcksPolicyType;
 import org.apache.cxf.ws.rm.manager.DestinationPolicyType;
 import org.apache.cxf.ws.rmp.v200502.RMAssertion;
