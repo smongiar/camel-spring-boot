@@ -151,6 +151,8 @@ public class WSRMTest {
         cp.setDecoupledEndpoint(decoupledEndpoint);
         String result = helloWorld.sayHi("world!");
         assertEquals("Hello world!", result, "Get a wrong response");
+        result = helloWorld.sayHi("world!");//second call will trigger MessageLoss and resend
+        assertEquals("Hello world!", result, "Get a wrong response");
     }
     
     // *************************************

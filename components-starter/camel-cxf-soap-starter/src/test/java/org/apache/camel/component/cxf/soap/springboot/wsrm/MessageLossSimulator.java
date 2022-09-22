@@ -70,6 +70,7 @@ public class MessageLossSimulator extends AbstractPhaseInterceptor<Message> {
             return;
         }
 
+        
         // discard even-numbered message
         InterceptorChain chain = message.getInterceptorChain();
         ListIterator<Interceptor<? extends Message>> it = chain.getIterator();
