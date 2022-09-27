@@ -139,6 +139,9 @@
                 <wsdlOption>
                   <wsdl>${basedir}/src/test/resources/MultiPartTest.wsdl</wsdl>
                 </wsdlOption>
+                <wsdlOption>
+                  <wsdl>${basedir}/src/test/resources/person.wsdl</wsdl>
+                </wsdlOption>
               </wsdlOptions>
             </configuration>
             <goals>
