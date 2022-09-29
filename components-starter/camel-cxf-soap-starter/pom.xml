@@ -84,6 +84,33 @@
       <scope>test</scope>
       <version>${cxf-version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-ws-rm</artifactId>
+      <scope>test</scope>
+      <version>${cxf-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-testutils</artifactId>
+      <scope>test</scope>
+      <version>${cxf-version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.cxf</groupId>
+      <artifactId>cxf-rt-transports-jms</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-broker</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-kahadb-store</artifactId>
+      <scope>test</scope>
+    </dependency>
     <!--START OF GENERATED CODE-->
     <dependency>
       <groupId>org.apache.camel.springboot</groupId>
@@ -111,6 +138,9 @@
               <wsdlOptions>
                 <wsdlOption>
                   <wsdl>${basedir}/src/test/resources/MultiPartTest.wsdl</wsdl>
+                </wsdlOption>
+                <wsdlOption>
+                  <wsdl>${basedir}/src/test/resources/person.wsdl</wsdl>
                 </wsdlOption>
               </wsdlOptions>
             </configuration>
