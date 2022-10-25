@@ -115,7 +115,7 @@
 
         <!-- cq plugin version -->
         <cq-plugin.version>2.32.0</cq-plugin.version>
-        <camel-community.version>3.18.2</camel-community.version>
+        <camel-community.version>3.18.3</camel-community.version>
 
         <!-- versions -->
         <aether-version>1.0.2.v20150114</aether-version>
@@ -137,7 +137,7 @@
         <surefire.version>${maven-surefire-plugin-version}</surefire.version>
         <swagger-parser-v3-version>2.0.31</swagger-parser-v3-version>
         <undertow-version>2.2.16.Final</undertow-version>
-        <camel-spring-boot-community.version>3.18.2</camel-spring-boot-community.version>
+        <camel-spring-boot-community.version>3.18.3</camel-spring-boot-community.version>
     </properties>
 
 
