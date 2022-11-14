@@ -1,7 +1,6 @@
 :camel-activemq-starter
 :camel-any23-starter
 :camel-arangodb-starter
-:camel-archetype-spring-boot
 :camel-as2-starter
 :camel-asn1-starter
 :camel-asterisk-starter
