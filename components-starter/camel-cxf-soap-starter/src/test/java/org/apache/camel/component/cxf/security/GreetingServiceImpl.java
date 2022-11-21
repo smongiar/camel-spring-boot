@@ -14,25 +14,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.camel.component.cxf.soap.springboot;
+package org.apache.camel.component.cxf.security;
 
-import org.apache.cxf.binding.soap.SoapMessage;
-import org.apache.cxf.interceptor.Fault;
-import org.apache.cxf.interceptor.StaxOutInterceptor;
-import org.apache.cxf.phase.AbstractPhaseInterceptor;
-import org.apache.cxf.phase.Phase;
+import javax.jws.WebService;
 
-//START SNIPPET: example
-public class WriteXmlDeclarationInterceptor extends AbstractPhaseInterceptor<SoapMessage> {
-    public WriteXmlDeclarationInterceptor() {
-        super(Phase.PRE_STREAM);
-        addBefore(StaxOutInterceptor.class.getName());
-    }
+@WebService(endpointInterface = "org.apache.camel.component.cxf.security.GreetingService")
+public class GreetingServiceImpl implements GreetingService {
 
-    @Override
-    public void handleMessage(SoapMessage message) throws Fault {
-        message.put("org.apache.cxf.stax.force-start-document", Boolean.TRUE);
-    }
-
+	@Override
+	public String greet(String name) {
+		return "Hello " + name;
+	}
 }
-//END SNIPPET: example

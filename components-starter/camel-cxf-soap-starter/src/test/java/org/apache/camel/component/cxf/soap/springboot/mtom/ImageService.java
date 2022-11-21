@@ -14,21 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.camel.component.cxf.soap.springboot;
+package org.apache.camel.component.cxf.soap.springboot.mtom;
 
-import javax.xml.transform.Source;
-import javax.xml.ws.Provider;
-import javax.xml.ws.Service.Mode;
-import javax.xml.ws.ServiceMode;
-import javax.xml.ws.WebServiceProvider;
+import java.awt.Image;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+import javax.xml.ws.soap.MTOM;
 
-@WebServiceProvider
-@ServiceMode(Mode.PAYLOAD)
-public class ServiceProvider implements Provider<Source> {
+@WebService(name = "ImageService", targetNamespace = "http://apache.org/camel/cxf/mtom_feature")
+@MTOM
+public interface ImageService {
 
-    @Override
-    public Source invoke(Source m) {
-        throw new UnsupportedOperationException("Place holder method");
-    }
+    Image downloadImage(@WebParam(name = "name") String name);
+
+    
+    String uploadImage(@WebParam(name = "data") Image data, @WebParam(name = "name") String name);
 
 }
