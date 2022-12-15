@@ -30,6 +30,9 @@
     <requiredProperty key="maven-compiler-plugin-version">
       <defaultValue>${maven-compiler-plugin-version}</defaultValue>
     </requiredProperty>
+    <requiredProperty key="openshift-maven-plugin-version">
+      <defaultValue>${openshift-maven-plugin-version}</defaultValue>
+    </requiredProperty>
   </requiredProperties>
   <fileSets>
     <fileSet filtered="true" packaged="true" encoding="UTF-8">
