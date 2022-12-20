@@ -39,13 +39,13 @@
     </jaxrs:serviceBeans>       
   </jaxrs:server>
   
-  <bean id="echoService" class="org.apache.camel.component.cxf.jaxrs.testbean.EchoServiceImpl" />
+  <bean id="echoService" class="org.apache.camel.component.cxf.jaxrs.testbean.EchoService" />
 
-  <cxf:rsClient id="rsClientProxy" address="http://localhost:8080/services/CxfRsProducerSessionTest/"
+  <cxf:rsClient id="rsClientProxy" address="http://localhost:${CXFTestSupport.port1}/services/CxfRsProducerSessionTest/"
     serviceClass="org.apache.camel.component.cxf.jaxrs.testbean.EchoService"
     loggingFeatureEnabled="true" />
    
-  <cxf:rsClient id="rsClientHttp" address="http://localhost:8080/services/CxfRsProducerSessionTest/"/>
+  <cxf:rsClient id="rsClientHttp" address="http://localhost:${CXFTestSupport.port1}/services/CxfRsProducerSessionTest/"/>
 
 
   <bean id="instanceCookieHandler" class="org.apache.camel.http.base.cookie.InstanceCookieHandler"/>

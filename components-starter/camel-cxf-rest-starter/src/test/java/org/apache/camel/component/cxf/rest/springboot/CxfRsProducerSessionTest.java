@@ -22,6 +22,7 @@ import org.apache.camel.ExchangePattern;
 import org.apache.camel.Message;
 import org.apache.camel.Processor;
 import org.apache.camel.ProducerTemplate;
+import org.apache.camel.component.cxf.common.CXFTestSupport;
 import org.apache.camel.component.cxf.common.message.CxfConstants;
 import org.apache.camel.spring.boot.CamelAutoConfiguration;
 
@@ -56,9 +57,11 @@ import org.apache.cxf.spring.boot.autoconfigure.CxfAutoConfiguration;
 })
 public class CxfRsProducerSessionTest {
 
+    static int port = CXFTestSupport.getPort1();
+    
     @Bean
     public ServletWebServerFactory servletWebServerFactory() {
-        return new UndertowServletWebServerFactory();
+        return new UndertowServletWebServerFactory(port);
     }
     
     @Test

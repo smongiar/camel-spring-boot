@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.apache.camel.component.cxf.rest.springboot;
+package org.apache.camel.component.cxf.jaxrs;
 
 
+import java.util.List;
+
+import org.apache.camel.CamelContext;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.cxf.common.CXFTestSupport;
 import org.apache.camel.component.cxf.jaxrs.testbean.ServiceUtil;
-import org.apache.camel.component.cxf.spring.jaxrs.SpringJAXRSServerFactoryBean;
+import org.apache.camel.component.cxf.spring.jaxrs.SpringJAXRSClientFactoryBean;
 import org.apache.camel.spring.boot.CamelAutoConfiguration;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
@@ -36,14 +40,13 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.annotation.DirtiesContext.ClassMode;
 import org.apache.camel.test.spring.junit5.CamelSpringBootTest;
+import org.apache.cxf.ext.logging.LoggingInInterceptor;
+import org.apache.cxf.ext.logging.LoggingOutInterceptor;
+import org.apache.cxf.interceptor.Interceptor;
 import org.apache.cxf.jaxrs.AbstractJAXRSFactoryBean;
+import org.apache.cxf.jaxrs.client.JAXRSClientFactoryBean;
 import org.apache.cxf.spring.boot.autoconfigure.CxfAutoConfiguration;
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPut;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.util.EntityUtils;
+
 
 
 @DirtiesContext(classMode = ClassMode.AFTER_EACH_TEST_METHOD)
@@ -51,37 +54,33 @@ import org.apache.http.util.EntityUtils;
 @SpringBootTest(
     classes = {
         CamelAutoConfiguration.class,
-        CxfRsConsumerWithBeanTest.class,
-        CxfRsConsumerWithBeanTest.TestConfiguration.class,
+        CxfRsProducerClientFactoryBeanTest.class,
+        CxfRsProducerClientFactoryBeanTest.TestConfiguration.class,
         CxfAutoConfiguration.class
     }, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
-public class CxfRsConsumerWithBeanTest {
+public class CxfRsProducerClientFactoryBeanTest {
 
     private int port = CXFTestSupport.getPort1();
-    private static final String CXT = "/CxfRsConsumerWithBeanTest";
+    
+    
+    @Autowired
+    CamelContext context;
         
     
     @Test
-    public void testPutConsumer() throws Exception {
-        sendPutRequest("http://localhost:" + port + "/services" + CXT + "/rest/customerservice/c20");
-        sendPutRequest("http://localhost:" + port + "/services" + CXT + "/rest2/customerservice/c20");
-    }
-
-    private void sendPutRequest(String uri) throws Exception {
-        HttpPut put = new HttpPut(uri);
-        StringEntity entity = new StringEntity("string");
-        entity.setContentType("text/plain");
-        put.setEntity(entity);
-        CloseableHttpClient httpclient = HttpClientBuilder.create().build();
-
-        try {
-            HttpResponse response = httpclient.execute(put);
-            assertEquals(200, response.getStatusLine().getStatusCode());
-            assertEquals("c20string", EntityUtils.toString(response.getEntity()));
-        } finally {
-            httpclient.close();
-        }
+    public void testProducerInOutInterceptors() throws Exception {
+        CxfRsEndpoint e = context.getEndpoint(
+                "cxfrs://bean://rsClientHttpInterceptors", CxfRsEndpoint.class);
+        CxfRsProducer p = new CxfRsProducer(e);
+        CxfRsProducer.ClientFactoryBeanCache cache = p.getClientFactoryBeanCache();
+        JAXRSClientFactoryBean bean = cache.get("http://localhost:" + port + "/services/CxfRsProducerClientFactoryBeanInterceptors/");
+        List<Interceptor<?>> ins = bean.getInInterceptors();
+        assertEquals(1, ins.size());
+        assertTrue(ins.get(0) instanceof LoggingInInterceptor);
+        List<Interceptor<?>> outs = bean.getOutInterceptors();
+        assertEquals(1, outs.size());
+        assertTrue(outs.get(0) instanceof LoggingOutInterceptor);
     }
     
     // *************************************
@@ -102,33 +101,23 @@ public class CxfRsConsumerWithBeanTest {
         }
         
         @Bean
-        public AbstractJAXRSFactoryBean consumer1() {
-            SpringJAXRSServerFactoryBean afb = new SpringJAXRSServerFactoryBean();
+        public AbstractJAXRSFactoryBean rsClientHttpInterceptors() {
+            SpringJAXRSClientFactoryBean afb = new SpringJAXRSClientFactoryBean();
             
-            afb.setAddress("/CxfRsConsumerWithBeanTest/rest");
-            afb.setResourceClasses(org.apache.camel.component.cxf.jaxrs.testbean.CustomerServiceResource.class);
-            
+            afb.setAddress("/CxfRsProducerClientFactoryBeanInterceptors/");
+            afb.getInInterceptors().add(new org.apache.cxf.ext.logging.LoggingInInterceptor());
+            afb.getOutInterceptors().add(new org.apache.cxf.ext.logging.LoggingOutInterceptor());
             return afb;
         }
         
-        @Bean
-        public AbstractJAXRSFactoryBean consumer2() {
-            SpringJAXRSServerFactoryBean afb = new SpringJAXRSServerFactoryBean();
-            
-            afb.setAddress("/CxfRsConsumerWithBeanTest/rest2");
-            afb.setResourceClasses(org.apache.camel.component.cxf.jaxrs.testbean.CustomerServiceResource.class);
-            
-            return afb;
-        }
+        
         
         @Bean
         public RouteBuilder routeBuilder() {
             return new RouteBuilder() {
                 @Override
                 public void configure() {
-
-                    from("cxfrs:bean:consumer1").to("bean://service?method=invoke(${body[0]}, ${body[1]})");
-                    from("cxfrs:bean:consumer2").bean(ServiceUtil.class, "invoke(${body[0]}, ${body[1]})");
+                    from("direct://http").to("cxfrs:bean:rsClientHttpInterceptors");
                 }
             };
         }
