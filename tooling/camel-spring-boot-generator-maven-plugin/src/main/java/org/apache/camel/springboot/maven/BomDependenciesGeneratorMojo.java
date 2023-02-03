@@ -332,7 +332,7 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
 
         // Add Narayana starter and associated artifacts
         dep = new Dependency();
-        dep.setGroupId("me.snowdrop");
+        dep.setGroupId("com.redhat.snowdrop");
         dep.setArtifactId("narayana-spring-boot-starter");
         dep.setVersion(narayanaSpringBootVersion);
         if (!dependencyExists(outDependencies, dep)) {
@@ -340,7 +340,7 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
         }
 
         dep = new Dependency();
-        dep.setGroupId("me.snowdrop");
+        dep.setGroupId("com.redhat.snowdrop");
         dep.setArtifactId("narayana-spring-boot-core");
         dep.setVersion(narayanaSpringBootVersion);
         if (!dependencyExists(outDependencies, dep)) {
@@ -348,7 +348,7 @@ public class BomDependenciesGeneratorMojo extends AbstractMojo {
         }
 
         dep = new Dependency();
-        dep.setGroupId("me.snowdrop");
+        dep.setGroupId("com.redhat.snowdrop");
         dep.setArtifactId("narayana-spring-boot-recovery-controller");
         dep.setVersion(narayanaSpringBootVersion);
         if (!dependencyExists(outDependencies, dep)) {

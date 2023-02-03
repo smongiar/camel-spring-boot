@@ -192,17 +192,17 @@
         <version>1.4.0</version>
       </dependency>
       <dependency>
-        <groupId>me.snowdrop</groupId>
+        <groupId>com.redhat.snowdrop</groupId>
         <artifactId>narayana-spring-boot-core</artifactId>
         <version>2.6.7</version>
       </dependency>
       <dependency>
-        <groupId>me.snowdrop</groupId>
+        <groupId>com.redhat.snowdrop</groupId>
         <artifactId>narayana-spring-boot-recovery-controller</artifactId>
         <version>2.6.7</version>
       </dependency>
       <dependency>
-        <groupId>me.snowdrop</groupId>
+        <groupId>com.redhat.snowdrop</groupId>
         <artifactId>narayana-spring-boot-starter</artifactId>
         <version>2.6.7</version>
       </dependency>
