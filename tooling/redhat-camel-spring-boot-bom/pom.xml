@@ -32,7 +32,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-	<!-- Camel / SpringBoot dependency versions -->
+        <!-- Camel / SpringBoot dependency versions -->
         <version.camel>3.20.1.redhat-00005</version.camel>
         <version.camel-spring-boot>3.20.1.redhat-00012</version.camel-spring-boot>
         <version.spring-boot>2.7.4</version.spring-boot>
@@ -40,6 +40,8 @@
         <!-- Third party dependency versions -->
         <version.snakeyaml>1.33</version.snakeyaml>
         <version.hsqldb>2.7.1</version.hsqldb>
+        <version.elasticsearch-java-client>8.5.2</version.elasticsearch-java-client>
+        <version.cxf>3.5.5</version.cxf>
 
     </properties>
 
@@ -89,6 +91,17 @@
                 <artifactId>hsqldb</artifactId>
                 <version>${version.hsqldb}</version>
             </dependency>
+            <!-- Overrides elastic-search dependency since SB is using an older version -->
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-client</artifactId>
+                <version>${version.elasticsearch-java-client}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.elasticsearch.client</groupId>
+                <artifactId>elasticsearch-rest-client-sniffer</artifactId>
+                <version>${version.elasticsearch-java-client}</version>
+            </dependency>
             <!-- Spring Boot Dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -102,6 +115,14 @@
                 <groupId>org.apache.camel.springboot</groupId>
                 <artifactId>camel-spring-boot-bom</artifactId>
                 <version>${version.camel-spring-boot}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- CXF BOM -->
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-bom</artifactId>
+                <version>${version.cxf}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
