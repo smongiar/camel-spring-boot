@@ -23,6 +23,7 @@ import org.apache.camel.Exchange;
 import org.apache.camel.ExtendedExchange;
 import org.apache.camel.ProducerTemplate;
 import org.apache.camel.builder.RouteBuilder;
+import org.apache.camel.component.cxf.common.CXFTestSupport;
 import org.apache.camel.component.cxf.jaxrs.testbean.Customer;
 import org.apache.camel.component.mock.MockEndpoint;
 import org.apache.camel.converter.stream.CachedOutputStream;
@@ -65,9 +66,11 @@ import org.apache.http.util.EntityUtils;
 )
 public class CxfRsStreamCacheTest {
 
+    private static int port = CXFTestSupport.getPort1();
+    
     private static final String PUT_REQUEST = "<Customer><name>Mary</name><id>123</id></Customer>";
     private static final String CONTEXT = "/CxfRsStreamCacheTest";
-    private static final String CXT = "8080/services" + CONTEXT;
+    private static final String CXT = port + "/services" + CONTEXT;
     private static final String RESPONSE = "<pong xmlns=\"test/service\"/>";
 
     private String cxfRsEndpointUri = "cxfrs://" + CONTEXT + "?synchronous=" + isSynchronous()
@@ -84,7 +87,7 @@ public class CxfRsStreamCacheTest {
     
     @Bean
     public ServletWebServerFactory servletWebServerFactory() {
-        return new UndertowServletWebServerFactory();
+        return new UndertowServletWebServerFactory(port);
     }
     
     
