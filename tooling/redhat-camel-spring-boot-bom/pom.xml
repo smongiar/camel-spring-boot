@@ -42,7 +42,8 @@
         <version.hsqldb>2.7.1</version.hsqldb>
         <version.elasticsearch-java-client>8.5.2</version.elasticsearch-java-client>
         <version.cxf>3.5.5</version.cxf>
-
+        <!-- Latest RH Artemis client release -->
+        <version.artemis>2.21.0</version.artemis> 
     </properties>
 
     <url>https://developers.redhat.com/products/fuse/overview</url>
@@ -102,6 +103,46 @@
                 <artifactId>elasticsearch-rest-client-sniffer</artifactId>
                 <version>${version.elasticsearch-java-client}</version>
             </dependency>
+            <!-- Artemis Overrides -->
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-commons</artifactId>
+                <version>${version.artemis}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>commons-logging</groupId>
+                        <artifactId>commons-logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-core-client</artifactId>
+                <version>${version.artemis}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.geronimo.specs</groupId>
+                        <artifactId>geronimo-json_1.0_spec</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-jdbc-store</artifactId>
+                <version>${version.artemis}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-jms-client</artifactId>
+                <version>${version.artemis}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.geronimo.specs</groupId>
+                        <artifactId>geronimo-json_1.0_spec</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
             <!-- Spring Boot Dependencies -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
