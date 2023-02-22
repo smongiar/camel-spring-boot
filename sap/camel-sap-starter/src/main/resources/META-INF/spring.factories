@@ -15,4 +15,26 @@
 ## limitations under the License.
 ## ---------------------------------------------------------------------------
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-org.fusesource.camel.component.sap.springboot.SapConnectionAutoConfiguration
+org.fusesource.camel.component.sap.springboot.SapConnectionAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapTransactionalRfcDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapSynchronousRfcDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapQueuedIDocListDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapQueuedIDocDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapTransactionalIDocListServerComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapQueuedRfcDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapSynchronousRfcServerComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapClearCacheComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapTransactionalIDocDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapTransactionalIDocListDestinationComponentAutoConfiguration,\
+org.fusesource.camel.component.sap.springboot.SapTransactionalRfcServerComponentAutoConfiguration
+
+
+
+
+
+
+
+
+
+
+
