@@ -35,7 +35,6 @@
 :camel-braintree-starter
 :camel-caffeine-lrucache-starter
 :camel-caffeine-starter
-:camel-catalog-provider-springboot
 :camel-cbor-starter
 :camel-chatscript-starter
 :camel-chunk-starter
