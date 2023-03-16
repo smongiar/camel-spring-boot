@@ -148,6 +148,7 @@
         <swagger-parser-v3-version>2.0.31</swagger-parser-v3-version>
         <undertow-version>2.2.16.Final</undertow-version>
         <camel-spring-boot-community.version>3.20.1</camel-spring-boot-community.version>
+        <cyclonedx-maven-plugin-version>2.7.5</cyclonedx-maven-plugin-version>
     </properties>
 
     <dependencyManagement>
@@ -953,6 +954,32 @@
                 </plugins>
             </build>
         </profile>
-
+        <profile>
+            <id>sbom</id>
+            <build>
+            <plugins>
+                <plugin>
+                   <groupId>org.cyclonedx</groupId>
+                   <artifactId>cyclonedx-maven-plugin</artifactId>
+                   <version>${cyclonedx-maven-plugin-version}</version>
+                   <inherited>false</inherited>
+                   <configuration>
+			   <outputName>camel-spring-boot-sbom</outputName>
+			   <outputDirectory>${project.basedir}/camel-spring-boot-sbom/</outputDirectory>
+			   <excludeArtifactId>camel-spring-boot-bom,camel-spring-boot-dependencies,camel-springboot-bom</excludeArtifactId>
+                   </configuration>
+                   <executions>
+                       <execution>
+                           <phase>package</phase>
+                           <goals>
+                               <goal>makeAggregateBom</goal>
+                           </goals>
+                      </execution>
+                   </executions>
+                </plugin>
+            </plugins>
+            </build>
+        </profile>
+        
     </profiles>
 </project>
