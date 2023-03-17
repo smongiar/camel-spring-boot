@@ -1007,6 +1007,13 @@
             </plugins>
             </build>
         </profile>
-        
+
+        <profile>
+            <id>maintenance</id>
+            <modules>
+                <module>maintenance</module>
+            </modules>
+        </profile>
+
     </profiles>
 </project>
