@@ -388,7 +388,7 @@ public class SecureDependencyManagement extends AbstractMavenLifecycleParticipan
                     // and next resolution of com.redhat.camel.springboot.platform:camel-spring-boot-patch-metadata:RELEASE with
                     // different patch of from remote repos would ONLY because the ID of the repo wouldn't match...
                     RemoteRepository.Builder zipRepositoryBuilder
-                            = new RemoteRepository.Builder("csb-patch", "zip", "zip:" + tmpDir.toURI().toString());
+                            = new RemoteRepository.Builder("csb-patch", "default", tmpDir.toURI().toString());
                     zipRepository = zipRepositoryBuilder.build();
                     repositories.add(zipRepository);
                 }

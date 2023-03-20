@@ -96,6 +96,14 @@ public class ZipWagon extends StreamWagon {
                 }
                 String name = trimName(ze.getName());
                 File target = new File(tmpDir, name);
+                if ("maven-metadata-local.xml".equals(target.getName())) {
+                    target = new File(target.getParentFile(), "maven-metadata.xml");
+                    name = name.replaceFirst("maven-metadata-local.xml$", "maven-metadata.xml");
+                }
+                if ("maven-metadata-local.xml.md5".equals(target.getName())) {
+                    target = new File(target.getParentFile(), "maven-metadata.xml.md5");
+                    name = name.replaceFirst("maven-metadata-local.xml.md5$", "maven-metadata.xml.md5");
+                }
                 boolean checksumFile = name.endsWith(".md5");
                 if (!checksumFile) {
                     md5.reset();

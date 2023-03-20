@@ -50,14 +50,12 @@ import org.eclipse.aether.repository.RemoteRepository;
 import org.eclipse.aether.resolution.ArtifactRequest;
 import org.eclipse.aether.resolution.ArtifactResult;
 import org.eclipse.aether.spi.connector.RepositoryConnectorFactory;
-import org.eclipse.aether.spi.connector.layout.RepositoryLayoutFactory;
 import org.eclipse.aether.spi.connector.transport.TransporterFactory;
 import org.eclipse.aether.transport.wagon.WagonProvider;
 import org.eclipse.aether.transport.wagon.WagonTransporterFactory;
 import org.eclipse.aether.util.version.GenericVersionScheme;
 import org.eclipse.aether.version.Version;
 import org.eclipse.aether.version.VersionRange;
-import org.apache.camel.springboot.patch.extensions.ZipRepositoryLayoutFactory;
 import org.apache.camel.springboot.patch.extensions.ZipWagon;
 import org.apache.camel.springboot.patch.model.ProductVersion;
 import org.junit.jupiter.api.Test;
@@ -143,7 +141,7 @@ public class MavenTest {
         locator.setService(RepositoryConnectorFactory.class, BasicRepositoryConnectorFactory.class);
 
 //        locator.addService(RepositoryLayoutProvider.class, ZipRepositoryLayoutProvider.class);
-        locator.addService(RepositoryLayoutFactory.class, ZipRepositoryLayoutFactory.class);
+//        locator.addService(RepositoryLayoutFactory.class, ZipRepositoryLayoutFactory.class);
 
         locator.setServices(WagonProvider.class, new ZipWagonProvider());
         locator.addService(TransporterFactory.class, WagonTransporterFactory.class);
