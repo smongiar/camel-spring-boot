@@ -18,6 +18,7 @@
 		<spring.boot-version>{{ .SpringBootVersion }}</spring.boot-version>
 		<surefire.plugin.version>3.0.0-M4</surefire.plugin.version>
 		<jkube.generator.from>registry.access.redhat.com/ubi8/openjdk-11:1.14</jkube.generator.from>
+		<camel.spring.boot-version>{{ .CamelSpringBootVersion }}</camel.spring.boot-version>
 {{ .AdditionalProperties }}
 	</properties>
 
@@ -26,7 +27,7 @@
 			<dependency>
 				<groupId>com.redhat.camel.springboot.platform</groupId>
 				<artifactId>camel-spring-boot-bom</artifactId>
-				<version>{{ .CamelSpringBootVersion }}</version>
+				<version>${camel.spring.boot-version}</version>
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
@@ -89,7 +90,7 @@
             <plugin>
                 <groupId>com.redhat.camel.springboot.platform</groupId>
                 <artifactId>patch-maven-plugin</artifactId>
-                <version>{{ .CamelSpringBootVersion }}</version>
+                <version>${camel.spring.boot-version}</version>
                 <extensions>true</extensions>
                 <configuration>
                     <skip>false</skip>
