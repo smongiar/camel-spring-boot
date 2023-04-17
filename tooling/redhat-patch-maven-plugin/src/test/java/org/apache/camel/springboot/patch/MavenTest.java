@@ -133,38 +133,6 @@ public class MavenTest {
     }
 
     @Test
-    public void zipRemoteRepositories() throws Exception {
-        File repository = new File("target/repository");
-        assertTrue(repository.isDirectory() || repository.mkdirs());
-        FileUtils.cleanDirectory(repository);
-        DefaultServiceLocator locator = MavenRepositorySystemUtils.newServiceLocator();
-        locator.setService(RepositoryConnectorFactory.class, BasicRepositoryConnectorFactory.class);
-
-//        locator.addService(RepositoryLayoutProvider.class, ZipRepositoryLayoutProvider.class);
-//        locator.addService(RepositoryLayoutFactory.class, ZipRepositoryLayoutFactory.class);
-
-        locator.setServices(WagonProvider.class, new ZipWagonProvider());
-        locator.addService(TransporterFactory.class, WagonTransporterFactory.class);
-
-        org.eclipse.aether.RepositorySystem resolverSystem
-                = locator.getService(org.eclipse.aether.RepositorySystem.class);
-
-        DefaultRepositorySystemSession session = MavenRepositorySystemUtils.newSession();
-        LocalRepository localRepository = new LocalRepository(repository);
-        session.setLocalRepositoryManager(resolverSystem.newLocalRepositoryManager(session, localRepository));
-
-        ArtifactRequest request = new ArtifactRequest();
-        request.setArtifact(new DefaultArtifact("commons-io:commons-io:pom:42.0"));
-
-        File tmpDir = ZipWagon.unpackPatchRepository(new File("src/test/resources/patch-1.zip"));
-        RemoteRepository.Builder b1
-                = new RemoteRepository.Builder("patch", "zip", "zip:" + tmpDir.toURI().toString());
-        request.addRepository(b1.build());
-        ArtifactResult result = resolverSystem.resolveArtifact(session, request);
-        System.out.println(result.getArtifact().getFile());
-    }
-
-    @Test
     public void embeddedModelInterpolation() {
         StringVisitorModelInterpolator interpolator = new StringVisitorModelInterpolator();
 
