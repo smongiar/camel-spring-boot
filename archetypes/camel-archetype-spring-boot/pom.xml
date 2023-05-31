@@ -33,10 +33,6 @@
     <description>Creates a new Camel project using Spring Boot.</description>
     <packaging>maven-archetype</packaging>
 
-    <properties>
-         <archetype.test.settingsFile>src/test/resources/settings.xml</archetype.test.settingsFile> <!-- Needed to download camel-spring-boot snapshots -->
-    </properties>
-
     <build>
         <extensions>
             <extension>
