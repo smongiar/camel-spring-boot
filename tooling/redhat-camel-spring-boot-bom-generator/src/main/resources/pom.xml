@@ -237,4 +237,15 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.redhat.camel.springboot.platform</groupId>
+                    <artifactId>patch-maven-plugin</artifactId>
+                    <version>${maven-javadoc-plugin-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
