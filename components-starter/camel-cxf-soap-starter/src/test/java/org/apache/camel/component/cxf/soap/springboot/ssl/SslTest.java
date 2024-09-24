@@ -40,11 +40,12 @@ import org.apache.camel.support.jsse.KeyStoreParameters;
 import org.apache.camel.support.jsse.SSLContextParameters;
 import org.apache.camel.support.jsse.TrustManagersParameters;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ssl.SslBundle;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.web.embedded.undertow.UndertowServletWebServerFactory;
-import org.springframework.boot.web.server.CertificateFileSslStoreProvider;
 import org.springframework.boot.web.server.Ssl;
 import org.springframework.boot.web.server.Ssl.ClientAuth;
+import org.springframework.boot.web.server.WebServerSslBundle;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -168,9 +169,10 @@ public class SslTest {
             ssl.setKeyStoreType("JKS");
             ssl.setKeyStore("classpath:ssl/keystore-server.jks");
             ssl.setKeyStorePassword("changeit");
+            SslBundle delegate = WebServerSslBundle.get(ssl);
             SslBuilderCustomizer sslBuilderCustomizer = 
                 new SslBuilderCustomizer(port, InetAddress.getByName("localhost"),
-                                         ssl, CertificateFileSslStoreProvider.from(ssl));
+                                         ssl, delegate.getStores());
             undertowWebServerFactory.addBuilderCustomizers(sslBuilderCustomizer);
             return undertowWebServerFactory;
         }

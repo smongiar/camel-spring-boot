@@ -37,8 +37,8 @@ import javax.net.ssl.X509ExtendedKeyManager;
 
 import org.springframework.boot.web.embedded.undertow.UndertowBuilderCustomizer;
 import org.springframework.boot.web.server.Ssl;
-import org.springframework.boot.web.server.SslConfigurationValidator;
-import org.springframework.boot.web.server.SslStoreProvider;
+import org.springframework.boot.ssl.SslBundleKey;
+import org.springframework.boot.ssl.SslStoreBundle;
 import org.springframework.boot.web.server.WebServerException;
 import org.springframework.util.ResourceUtils;
 import org.xnio.Options;
@@ -54,9 +54,9 @@ public class SslBuilderCustomizer implements UndertowBuilderCustomizer {
 
     private final Ssl ssl;
 
-    private final SslStoreProvider sslStoreProvider;
+    private final SslStoreBundle sslStoreProvider;
 
-    SslBuilderCustomizer(int port, InetAddress address, Ssl ssl, SslStoreProvider sslStoreProvider) {
+    SslBuilderCustomizer(int port, InetAddress address, Ssl ssl, SslStoreBundle sslStoreProvider) {
             this.port = port;
             this.address = address;
             this.ssl = ssl;
@@ -99,13 +99,14 @@ public class SslBuilderCustomizer implements UndertowBuilderCustomizer {
             return SslClientAuthMode.NOT_REQUESTED;
     }
 
-    private KeyManager[] getKeyManagers(Ssl ssl, SslStoreProvider sslStoreProvider) {
+    private KeyManager[] getKeyManagers(Ssl ssl, SslStoreBundle sslStoreProvider) {
             try {
                     KeyStore keyStore = getKeyStore(ssl, sslStoreProvider);
-                    SslConfigurationValidator.validateKeyAlias(keyStore, ssl.getKeyAlias());
+                    SslBundleKey.of(sslStoreProvider.getKeyStorePassword(), ssl.getKeyAlias())
+                        .assertContainsAlias(keyStore);
                     KeyManagerFactory keyManagerFactory = KeyManagerFactory
                                     .getInstance(KeyManagerFactory.getDefaultAlgorithm());
-                    String keyPassword = (sslStoreProvider != null) ? sslStoreProvider.getKeyPassword() : null;
+                    String keyPassword = (sslStoreProvider != null) ? sslStoreProvider.getKeyStorePassword() : null;
                     if (keyPassword == null) {
                             keyPassword = (ssl.getKeyPassword() != null) ? ssl.getKeyPassword() : ssl.getKeyStorePassword();
                     }
@@ -130,7 +131,7 @@ public class SslBuilderCustomizer implements UndertowBuilderCustomizer {
             return keyManagers;
     }
 
-    private KeyStore getKeyStore(Ssl ssl, SslStoreProvider sslStoreProvider) throws Exception {
+    private KeyStore getKeyStore(Ssl ssl, SslStoreBundle sslStoreProvider) throws Exception {
             if (sslStoreProvider != null) {
                     return sslStoreProvider.getKeyStore();
             }
@@ -138,7 +139,7 @@ public class SslBuilderCustomizer implements UndertowBuilderCustomizer {
                             ssl.getKeyStorePassword());
     }
 
-    private TrustManager[] getTrustManagers(Ssl ssl, SslStoreProvider sslStoreProvider) {
+    private TrustManager[] getTrustManagers(Ssl ssl, SslStoreBundle sslStoreProvider) {
             try {
                     KeyStore store = getTrustStore(ssl, sslStoreProvider);
                     TrustManagerFactory trustManagerFactory = TrustManagerFactory
@@ -151,7 +152,7 @@ public class SslBuilderCustomizer implements UndertowBuilderCustomizer {
             }
     }
 
-    private KeyStore getTrustStore(Ssl ssl, SslStoreProvider sslStoreProvider) throws Exception {
+    private KeyStore getTrustStore(Ssl ssl, SslStoreBundle sslStoreProvider) throws Exception {
             if (sslStoreProvider != null) {
                     return sslStoreProvider.getTrustStore();
             }
