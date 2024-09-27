@@ -333,7 +333,7 @@ public class BomGeneratorMojo extends AbstractMojo {
 
     private String resolveAgroalVersion() {
         List<ArtifactResult> artifactResults = resolveProjectDependencies(
-            "me.snowdrop",
+            "dev.snowdrop",
             "narayana-spring-boot-starter-it",
             narayanaSpringBootVersion,
             artifact -> artifact.getGroupId().equals("io.agroal")
