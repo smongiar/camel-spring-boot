@@ -276,67 +276,14 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-            <!-- Artemis Overrides -->
+           
+            <!-- Using artemis-bom, see CSB-5363 -->
             <dependency>
                 <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-amqp-protocol</artifactId>
+                <artifactId>artemis-bom</artifactId>
                 <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-commons</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-core-client</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-jakarta-client</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-jakarta-server</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-jakarta-service-extensions</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-jdbc-store</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-journal</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-lockmanager-api</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-selector</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-server</artifactId>
-                <version>${activemq-artemis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.activemq</groupId>
-                <artifactId>artemis-service-extensions</artifactId>
-                <version>${activemq-artemis-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <!-- Netty bom -->
@@ -474,40 +421,13 @@
                 <version>${jna-version}</version>
             </dependency>
 
+            <!-- Using grpc-bom, see CSB-5365 -->
             <dependency>
                 <groupId>io.grpc</groupId>
-                <artifactId>grpc-api</artifactId>
+                <artifactId>grpc-bom</artifactId>
                 <version>${grpc-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-api</artifactId>
-                <version>${grpc-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-core</artifactId>
-                <version>${grpc-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-netty-shaded</artifactId>
-                <version>${grpc-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-protobuf</artifactId>
-                <version>${grpc-version}</version>
-            </dependency>
-
-            <dependency>
-                <groupId>io.grpc</groupId>
-                <artifactId>grpc-stub</artifactId>
-                <version>${grpc-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <dependency>
