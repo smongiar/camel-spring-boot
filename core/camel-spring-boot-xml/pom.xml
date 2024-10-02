@@ -92,6 +92,12 @@
             <version>${spring-boot-version}</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.apache.camel.springboot</groupId>
+            <artifactId>camel-jetty-starter</artifactId>
+            <version>${camel-community.version}</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
