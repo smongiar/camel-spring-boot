@@ -20,7 +20,6 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.concurrent.CompletableFuture;
 import org.apache.camel.Exchange;
 import org.apache.camel.ExchangePattern;
 import org.apache.camel.Processor;
@@ -35,11 +34,16 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+
 public class SpringBootPlatformHttpConsumer extends DefaultConsumer implements PlatformHttpConsumer, Suspendable, SuspendableService {
 
     private static final Logger LOG = LoggerFactory.getLogger(SpringBootPlatformHttpConsumer.class);
 
     private final DefaultHttpBinding binding;
+    private Executor executor;
 
     public SpringBootPlatformHttpConsumer(PlatformHttpEndpoint endpoint, Processor processor) {
         super(endpoint, processor);
@@ -48,6 +52,12 @@ public class SpringBootPlatformHttpConsumer extends DefaultConsumer implements P
         this.binding.setMuteException(endpoint.isMuteException());
         this.binding.setFileNameExtWhitelist(endpoint.getFileNameExtWhitelist());
         this.binding.setUseReaderForPayload(!endpoint.isUseStreaming());
+        this.executor = Executors.newSingleThreadExecutor();
+    }
+
+    public SpringBootPlatformHttpConsumer(PlatformHttpEndpoint endpoint, Processor processor, Executor executor) {
+        this(endpoint, processor);
+        this.executor = executor;
     }
 
     @Override
@@ -75,7 +85,7 @@ public class SpringBootPlatformHttpConsumer extends DefaultConsumer implements P
                     // ignore
                 }
             }
-        });
+        }, executor);
     }
 
     protected void handleService(HttpServletRequest request, HttpServletResponse response) throws Exception {
