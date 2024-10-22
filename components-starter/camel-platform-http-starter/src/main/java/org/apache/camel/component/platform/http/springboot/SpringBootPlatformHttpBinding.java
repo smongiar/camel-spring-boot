@@ -16,13 +16,28 @@
  */
 package org.apache.camel.component.platform.http.springboot;
 
+import jakarta.activation.DataHandler;
+import jakarta.servlet.ServletContext;
 import jakarta.servlet.http.HttpServletRequest;
 import org.apache.camel.Message;
+import org.apache.camel.attachment.AttachmentMessage;
+import org.apache.camel.attachment.CamelFileDataSource;
 import org.apache.camel.component.platform.http.PlatformHttpEndpoint;
 import org.apache.camel.http.base.HttpHelper;
 import org.apache.camel.http.common.DefaultHttpBinding;
+import org.apache.camel.util.FileUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Locale;
 
 public class SpringBootPlatformHttpBinding extends DefaultHttpBinding {
+    private static final Logger LOG = LoggerFactory.getLogger(SpringBootPlatformHttpBinding.class);
 
     protected void populateRequestParameters(HttpServletRequest request, Message message) {
         super.populateRequestParameters(request, message);
@@ -45,6 +60,47 @@ public class SpringBootPlatformHttpBinding extends DefaultHttpBinding {
 
     private boolean useRestMatching(String path) {
         return path.indexOf('{') > -1;
+    }
+
+    @Override
+    protected void populateAttachments(HttpServletRequest request, Message message) {
+        // check if there is multipart files, if so will put it into DataHandler
+        if (request instanceof MultipartHttpServletRequest multipartHttpServletRequest) {
+            File tmpFolder = (File) request.getServletContext().getAttribute(ServletContext.TEMPDIR);
+            multipartHttpServletRequest.getFileMap().forEach((name, multipartFile) -> {
+                try {
+                    Path uploadedTmpFile = Paths.get(tmpFolder.getPath(), name);
+                    multipartFile.transferTo(uploadedTmpFile);
+
+                    if (name != null) {
+                        name = name.replaceAll("[\n\r\t]", "_");
+                    }
+
+                    boolean accepted = true;
+
+                    if (getFileNameExtWhitelist() != null) {
+                        String ext = FileUtil.onlyExt(name);
+                        if (ext != null) {
+                            ext = ext.toLowerCase(Locale.US);
+                            if (!getFileNameExtWhitelist().equals("*") && !getFileNameExtWhitelist().contains(ext)) {
+                                accepted = false;
+                            }
+                        }
+                    }
+
+                    if (accepted) {
+                        AttachmentMessage am = message.getExchange().getMessage(AttachmentMessage.class);
+                        am.addAttachment(name, new DataHandler(new CamelFileDataSource(uploadedTmpFile.toFile(), name)));
+                    } else {
+                        LOG.debug(
+                                "Cannot add file as attachment: {} because the file is not accepted according to fileNameExtWhitelist: {}",
+                                name, getFileNameExtWhitelist());
+                    }
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        }
     }
 
 }
